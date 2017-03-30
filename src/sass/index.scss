@@ -38,6 +38,7 @@ header{
 		    		position: relative;
     				z-index: 399;
     				i{background: url("../css/img/topnav.png") no-repeat 0 -70px;}
+    				&:hover{background:#fff;}
 		    	}
 	    		.wechat{
 					overflow: hidden;
@@ -215,6 +216,7 @@ header{
 				    line-height: 35px;
 				    font-size: 14px;
 				    overflow: hidden;
+				    &:hover{background: #00647f;}
     			}
     			.index{
     				background: #00647f;
@@ -225,6 +227,7 @@ header{
     					padding-right: 11px;
     					background: url("../css/img/mainnav.png") no-repeat right -8px;
     				}
+    				
 					.list{
 						width: 1065px;
 					    position: absolute;
@@ -258,4 +261,40 @@ header{
    			}
     	}
 	}
+}
+main{
+	margin-bottom: 35px;
+    position: relative;
+    .play{
+    	margin: 0 auto;
+	    margin-bottom: 35px;
+	    position: relative;
+	    ul{
+	    	width: 100%;
+		    overflow: hidden;
+		    position: relative;
+		    li{
+		    	width: 100%;
+			    height: 350px;
+			    overflow: hidden;
+			    position: absolute;
+		    	opacity:0;
+		    	&:first-child{opacity:1;}
+		    }
+	    }
+	    .page{
+	    	position: absolute;
+	    	span{
+	    		display: inline-block;
+	    		width: 20px;
+	    		height: 20px;
+	    		background: #6c6c6c;
+	    		border-radius: 50%;
+	    		margin: 0 5px;
+	    		text-align: center;
+	    		color: #aaa;
+	    	}
+	    	.active{background: #00c8ff;}
+	    }
+    }
 }

@@ -58,6 +58,10 @@ header .top .cont .right .public i {
   background: url("../css/img/topnav.png") no-repeat 0 -70px;
 }
 
+header .top .cont .right .public:hover {
+  background: #fff;
+}
+
 header .top .cont .right .wechat {
   overflow: hidden;
   display: none;
@@ -258,6 +262,10 @@ header .main .cont .menu a {
   overflow: hidden;
 }
 
+header .main .cont .menu a:hover {
+  background: #00647f;
+}
+
 header .main .cont .menu .index {
   background: #00647f;
 }
@@ -313,4 +321,52 @@ header .main .cont .info .postage {
 
 header .main .cont .info .return {
   background: url("../css/img/fournav.png") no-repeat 0 -70px;
+}
+
+main {
+  margin-bottom: 35px;
+  position: relative;
+}
+
+main .play {
+  margin: 0 auto;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+main .play ul {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+main .play ul li {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+main .play ul li:first-child {
+  opacity: 1;
+}
+
+main .play .page {
+  position: absolute;
+}
+
+main .play .page span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #6c6c6c;
+  border-radius: 50%;
+  margin: 0 5px;
+  text-align: center;
+  color: #aaa;
+}
+
+main .play .page .active {
+  background: #00c8ff;
 }
