@@ -1,0 +1,42 @@
+header {
+  width: 100%;
+}
+
+header .top {
+  height: 29px;
+  background: #f2f2f2;
+  border-bottom: 1px #e5e5e5 solid;
+}
+
+header .top .mian {
+  height: 29px;
+  line-height: 30px;
+  margin: 0 auto;
+}
+
+header .top .mian .left {
+  float: left;
+}
+
+header .top .mian .left li {
+  float: left;
+  margin-right: 30px;
+}
+
+header .top .mian .right {
+  float: right;
+}
+
+header .top .w1100 {
+  width: 1100px;
+}
+
+header .center {
+  background: #fff;
+  height: 108px;
+}
+
+header .main {
+  height: 35px;
+  background: #00c8ff;
+}
