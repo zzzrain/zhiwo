@@ -10,7 +10,7 @@
 	<div class="wrap">
 		<header>
 			<div class="top">
-				<div class="main w1100">
+				<div class="cont w1100">
 					<div class="left" id="login_status">
 						<ul class="clearfix">
 							<li>欢迎来到知我！这里，用专业呵护美丽。</li>
@@ -22,16 +22,14 @@
 						<ul class="clearfix">
 							<li class="public item_btn">
 								<a href=""><span>微信商城</span><i></i></a>
-								<div class="public_subnav item_cont">
-									<p class="wechat_ewm_img"><img src=""></p>
-								</div>
+								<div class="wechat"><img src="img/wechat.jpg"></div>
 							</li>
 							<li class="phone">
 								<a href="/app.html" rel="nofollow">手机知我</a>
 							</li>
 							<li class="public item_btn">
-								<a class="" href="/account/show" rel="nofollow"><span>我的小窝</span><i></i></a>
-								<div class="item_personal_subnav item_cont">
+								<a href="" rel="nofollow"><span>我的小窝</span><i></i></a>
+								<div class="personal">
 									<ul>
 										<li><a href="/order/list" rel="nofollow">我的订单</a></li>
 										<li><a href="/membership/coupons" rel="nofollow">我的优惠券</a></li>
@@ -42,9 +40,11 @@
 								</div>
 							</li>
 							<li class="line">|</li>
-							<li class="service item_btn">
-								<a href="http://www.zhiwo.com/help/main.html" target="_blank" rel="nofollow"><span>客户服务</span><i></i></a>
-								<div class="item_personal_subnav item_cont">
+							<li class="public service item_btn">
+								<a href="http://www.zhiwo.com/help/main.html" target="_blank" rel="nofollow">
+									<span>客户服务</span><i></i>
+								</a>
+								<div class="server">
 									<ul>
 										<li><a href="http://www.zhiwo.com/help/main.html" target="_blank" rel="nofollow">帮助中心</a></li>
 										<li><a href="http://weibo.com/zhiwowang" target="_blank" rel="nofollow">新浪微博</a></li>
@@ -59,43 +59,45 @@
 			</div>
 
 			<div class="center">
-				<div class="header_center_cont clearfix w1100">
-					<div class="header_clogo">
-						<a href="/"><img src="/static/images/ico/logo.jpg" alt="知我药妆"></a>
+				<div class="cont clearfix w1100">
+					<div class="logo">
+						<a href="/"><img src="img/logo.jpg" alt="知我药妆"></a>
 					</div>
-					<div class="header_csearch">
-						<div class="search_box header_searchbox">
-							<form class="clearfix search_form" action="/product/search" method="get">
-	                            <input class="search_box_text" name="keyword" type="text" value="可莱丝">
-	                            <input class="search_box_btn" name="search" type="submit" value="搜索">
-	                        </form>
-	                        <ul class="hotkey clearfix">
-	                            <li><a href="/product/search?keyword=保湿" rel="nofollow">保湿</a><i class="line"></i></li>
-	                            <li><a href="/product/search?keyword=面膜" rel="nofollow">面膜</a><i class="line"></i></li>
-	                            <li><a href="/product/search?keyword=洗面奶" rel="nofollow">洗面奶</a><i class="line"></i></li>
-	                            <li><a href="/product/search?keyword=补水" rel="nofollow">补水</a><i class="line"></i></li>
-	                            <li><a href="/product/search?keyword=香水" rel="nofollow">香水</a><i class="line"></i></li>
-	                            <li><a href="/product/search?keyword=眼霜" rel="nofollow">眼霜</a><i class="line"></i></li>
-	                            <li><a href="/product/search?keyword=口红" rel="nofollow">口红</a></li>
-	                        </ul>
-						</div>
+					<div class="search">
+						<form class="clearfix" action="/product/search" method="get">
+                            <input class="text" name="keyword" type="text" value="可莱丝">
+                            <input class="btn" name="search" type="submit" value="搜索">
+                        </form>
+                        <ul class="clearfix">
+                            <li><a href="/product/search?keyword=保湿" rel="nofollow">保湿</a><i class="line"></i></li>
+                            <li><a href="/product/search?keyword=面膜" rel="nofollow">面膜</a><i class="line"></i></li>
+                            <li><a href="/product/search?keyword=洗面奶" rel="nofollow">洗面奶</a><i class="line"></i></li>
+                            <li><a href="/product/search?keyword=补水" rel="nofollow">补水</a><i class="line"></i></li>
+                            <li><a href="/product/search?keyword=香水" rel="nofollow">香水</a><i class="line"></i></li>
+                            <li><a href="/product/search?keyword=眼霜" rel="nofollow">眼霜</a><i class="line"></i></li>
+                            <li><a href="/product/search?keyword=口红" rel="nofollow">口红</a></li>
+                        </ul>
 					</div>
-					<div class="header_cshopcar" id="header_cshopcar">
-						<p class="header_shopgoods_totleamout ">0</p>
-						<a class="header_myshopcar" href="/cart/show" rel="nofollow"><span>我的购物车</span><i></i></a>
-						<div class="header_shopgoods"></div>
+					<div class="shopcar" id="shopcar">
+						<p class="side">0</p>
+						<a class="myshopcar" href="" rel="nofollow">
+							<span>我的购物车</span><i></i>
+						</a>
+						<div class="shopgoods"></div>
 					</div>
 				</div>
 			</div>
 
 			<div class="main">
-				<div class="header_mainnav_cont w1100">
-					<div class="header_mc_menu">
+				<div class="cont w1100">
+					<div class="menu">
 						<ul class="clearfix">
-							<li class="header_navcurrent"><a class="mainnav" href="/"><span>首页</span></a></li>
-							<li class="hmcm_list item_btn">
+							<li class="index">
+								<a class="mainnav" href="/"><span>首页</span></a>
+							</li>
+							<li class="market item_btn">
 								<a class="mainnav" href="/mall"><span>知我商城</span></a>
-								<div class="hmcm_shop_list clearfix item_cont">
+								<div class="list clearfix item_cont">
 									<div class="hmcm_shop_listcont">
 										<div class="mainlist_row clearfix">
 											<div class="mainlist_inner hufu">
@@ -139,7 +141,6 @@
 													<dd><a href="/products/c213">润唇膏</a></dd>
 												</dl>
 											</div>
-
 											<div class="mainlist_inner caizhuang">
 												<dl>
 													<dt><a>彩妆香氛</a></dt>
@@ -157,30 +158,32 @@
 											</div>
 										</div>
 									</div>
-									<div class="hmcm_shop_listad" id="ad-navad"></div>
+									<div class="hmcm_shop_listad" id="ad-navad">
+									</div>
 								</div>
 							</li>
 							<li>
 								<a class="mainnav" href="/higo">
-									<img class="overseas_nav_img1" src="/static/images/ico/home_overseas.gif">
-									<img class="overseas_nav_img2" src="/static/images/ico/home_overseas_current.gif">
+									<img class="" src="img/home_overseas.gif">
+									<img class="" src="img/home_overseas_current.gif">
 								</a>
 							</li>
 						</ul>
 					</div>
-					<div class="header_mc_info">
+					<div class="info">
 						<ul class="clearfix">
-							<li class="fcb_invest"><span>百度投资</span></li>
-							<li class="fcb_quality"><span>真品保证</span></li>
-							<li class="fcb_mail"><span>139元包邮</span></li>
-							<li class="fcb_return"><span>30天无理由退换货</span></li>
+							<li class="baidu"><span>百度投资</span></li>
+							<li class="quality"><span>真品保证</span></li>
+							<li class="postage"><span>139元包邮</span></li>
+							<li class="return"><span>30天无理由退换货</span></li>
 						</ul>
 					</div>
 				</div>
 			</div>
-		<header>
+		</header>
 
 		<main></main>
+
 		<footer></footer>
 	</div>
 </body>
