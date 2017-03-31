@@ -1,4 +1,4 @@
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, lengend, button, input, textarea, th, td {
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, button, input, textarea, th, td {
     margin: 0;
     padding: 0;
 }
@@ -8,7 +8,7 @@ ul,ol{list-style: none;}
 a{text-decoration: none;outline: none;}
 img{border: 0;}
 div{display: block;}
-
+i{font-style: italic;}
 
 .wrap{
 	background: #f6f6f3;
