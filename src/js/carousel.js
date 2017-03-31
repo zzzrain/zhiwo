@@ -55,12 +55,14 @@ $(()=>{
 	}
 });
 
-// 下拉效果
+// 下拉效果、滑动效果
 $(()=>{
 	var wechat = $('#wechat');
 	var personal = $('#personal');
 	var server = $('#server');
 	var market = $('#market');
+
+	var slider = $('#slider li');
 
 	$(document).on('mouseenter','#wechat',function(){
 		wechat.children('div').animate({height: 100});	
@@ -78,5 +80,33 @@ $(()=>{
 		server.children('div').animate({height: 0});
 	}).on('mouseleave','#market',function(){
 		market.children('.list').animate({height: 0});
+	}).on('mouseenter','#slider li',function(){
+		$(this).animate({width: 74}).siblings().animate({width: 0})
+	}).on('mouseleave','#slider li',function(){
+		$(this).animate({width: 0})
 	})
+});
+
+// 滚动事件
+$(()=>{
+	// 需要头部、楼梯的高度
+	var top = $('header').outerHeight() + $('#play').outerHeight();
+	var side = $('main .side');
+
+	$(window).scroll( e=> {	
+		// 获取滚动距离 判断显示隐藏
+		var high =  $(this).scrollTop() - top;			
+		high>=0 ? side.show() : side.hide();
+
+		// 切换高亮(sibling)
+		// var idx = parseInt(high/louti);
+		// var now = $('ul li').eq(idx);
+		// now.addClass('hover').siblings().removeClass('hover');
+	});
+
+	// 事件委托
+	$('#nav').on('click','li',function(){
+		if($(this).hasClass('last')) {$('body').animate({scrollTop:0},'fast');}
+		else {$('body').animate({scrollTop:header+louti*$(this).index()},'fast');}
+	});
 });
