@@ -12,7 +12,7 @@ gulp.task('create',function(){
 		// 输出文件
 		.pipe(gulp.dest('src/css'))
 		// 自动刷新页面
-		.pipe(browserSync.reload({stream:true}));
+		.pipe(browserSync.reload({stream:true}))
 });
 
 // 监听任务
@@ -24,11 +24,12 @@ gulp.task('watch',function(){
 // 自动刷新
 gulp.task('server',function(){
 	browserSync({
-		server:{baseDir: "src"},
-		port:4000,
+		// server:{baseDir: "src"},
+		// port:4000,
 
 		// 代理
-		// proxy:'http://localhost/project/src/'
+		proxy:'http://localhost/project/src/',
+		file:['src/*html']
 	});
 
 	gulp.watch('src/sass/*.scss',['create']);

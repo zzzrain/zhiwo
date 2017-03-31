@@ -42,12 +42,14 @@ header{
 		    	}
 	    		.wechat{
 					overflow: hidden;
-					display: none;
-					height: 133px; 
-					padding-top: 3px; 
-					padding-bottom: 10px; 
-					margin-top: 0px; 
-					margin-bottom: 0px;
+					width: 85px;
+					height: 0px; 
+					position: absolute;
+					top: 30px;
+					left: 0px;
+					img{
+						width: 85px;
+					}
 				}
 				.phone{
 					a{
@@ -57,21 +59,31 @@ header{
 				}
 				.personal{
 					overflow: hidden; 
-					display: none; 
-					height: 150px; 
-					padding-top: 3px;
-					padding-bottom: 10px;  
-					margin-top: 0px; 
-					margin-bottom: 0px;
+					width: 85px; 
+					height: 0px; 
+					border: 1px solid #e5e5e5;
+					border-top: none;
+					background: #fff;
+					position: absolute;
+					top: 30px;
+					left: -1px;
+					li{
+						clear: left;
+					}
 				}
 				.server{
 					overflow: hidden; 
-					display: none; 
-					height: 120px; 
-					padding-top: 3px; 
-					margin-top: 0px; 
-					padding-bottom: 10px; 
-					margin-bottom: 0px;
+					width: 85px; 
+					height: 0px; 
+					border: 1px solid #e5e5e5;
+					border-top: none;
+					background: #fff;
+					position: absolute;
+					top: 30px;
+					left: -1px;
+					li{
+						clear: left;
+					}
 				}
 		    }
 	    } 
@@ -205,19 +217,22 @@ header{
    			.menu{
    				float: left;
     			position: relative;
-    			li{float: left;}
-    			a{
-    				display: block;
-				    width: 120px;
-				    height: 35px;
-				    color: #fff;
-				    text-align: center;
-				    font-family: '微软雅黑';
-				    line-height: 35px;
-				    font-size: 14px;
-				    overflow: hidden;
-				    &:hover{background: #00647f;}
+    			li{
+    				float: left;
+	    			&>a{
+	    				display: block;
+					    width: 120px;
+					    height: 35px;
+					    color: #fff;
+					    text-align: center;
+					    font-family: '微软雅黑';
+					    line-height: 35px;
+					    font-size: 14px;
+					    overflow: hidden;
+					    &:hover{background: #00647f;}
+	    			}
     			}
+    			
     			.index{
     				background: #00647f;
     			}
@@ -227,16 +242,62 @@ header{
     					padding-right: 11px;
     					background: url("../css/img/mainnav.png") no-repeat right -8px;
     				}
-    				
 					.list{
+						overflow: hidden;
 						width: 1065px;
+						height: 0px;
 					    position: absolute;
 					    top: 35px;
 					    left: 0px;
 					    background: #fff;
-					    padding: 4px 30px 30px 5px;
+					    padding: 0 30px 0 5px;
 					    z-index: 200;
-					    display: none;
+					    .product{
+						    a{
+								color: #6c6c6c;
+							}
+							dl{
+								width: 360px;
+							    margin: 40px 0 0 40px;
+							    float: left;
+							}
+						    dt{
+							    line-height: 23px;
+							    padding-left: 21px;
+							    width: 336px;
+							    height: 23px;
+							    padding: 0 0 6px 24px;
+							    border-bottom: 1px #c4c4c4 dotted;
+							    float: left;
+							    a{
+							    	font-size: 14px;
+								    font-weight: bold;
+								    background: #fff;
+							    }
+						    }
+						    dd{
+								float: left;
+    							margin: 12px 20px 0 0px;
+						    }
+						    .hufu{
+						    	background: url(../css/img/m_nav.png) no-repeat 0 0;
+					    	    line-height: 23px;
+								padding-left: 21px;
+						    }
+						    .yaoz{
+						    	background: url(../css/img/m_nav.png) no-repeat 0 -30px;
+						    	line-height: 18px;
+						    }
+						    .xihu{
+						    	background: url(../css/img/m_nav.png) no-repeat 0 -60px;
+								line-height: 24px;
+    							padding-left: 21px;
+						    }
+						    .caiz{
+						    	background: url(../css/img/m_nav.png) no-repeat 0 -90px;
+						    	line-height: 24px;
+						    }
+					    }
 					}
     			}	
    			}
@@ -265,7 +326,7 @@ header{
 main{
 	margin-bottom: 35px;
     position: relative;
-    .play{
+    #play{
     	margin: 0 auto;
 	    margin-bottom: 35px;
 	    position: relative;

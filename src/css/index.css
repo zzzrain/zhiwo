@@ -64,12 +64,15 @@ header .top .cont .right .public:hover {
 
 header .top .cont .right .wechat {
   overflow: hidden;
-  display: none;
-  height: 133px;
-  padding-top: 3px;
-  padding-bottom: 10px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  width: 85px;
+  height: 0px;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+}
+
+header .top .cont .right .wechat img {
+  width: 85px;
 }
 
 header .top .cont .right .phone a {
@@ -79,22 +82,34 @@ header .top .cont .right .phone a {
 
 header .top .cont .right .personal {
   overflow: hidden;
-  display: none;
-  height: 150px;
-  padding-top: 3px;
-  padding-bottom: 10px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  width: 85px;
+  height: 0px;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+  background: #fff;
+  position: absolute;
+  top: 30px;
+  left: -1px;
+}
+
+header .top .cont .right .personal li {
+  clear: left;
 }
 
 header .top .cont .right .server {
   overflow: hidden;
-  display: none;
-  height: 120px;
-  padding-top: 3px;
-  margin-top: 0px;
-  padding-bottom: 10px;
-  margin-bottom: 0px;
+  width: 85px;
+  height: 0px;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+  background: #fff;
+  position: absolute;
+  top: 30px;
+  left: -1px;
+}
+
+header .top .cont .right .server li {
+  clear: left;
 }
 
 header .center {
@@ -250,7 +265,7 @@ header .main .cont .menu li {
   float: left;
 }
 
-header .main .cont .menu a {
+header .main .cont .menu li > a {
   display: block;
   width: 120px;
   height: 35px;
@@ -262,7 +277,7 @@ header .main .cont .menu a {
   overflow: hidden;
 }
 
-header .main .cont .menu a:hover {
+header .main .cont .menu li > a:hover {
   background: #00647f;
 }
 
@@ -280,14 +295,68 @@ header .main .cont .menu .market span {
 }
 
 header .main .cont .menu .market .list {
+  overflow: hidden;
   width: 1065px;
+  height: 0px;
   position: absolute;
   top: 35px;
   left: 0px;
   background: #fff;
-  padding: 4px 30px 30px 5px;
+  padding: 0 30px 0 5px;
   z-index: 200;
-  display: none;
+}
+
+header .main .cont .menu .market .list .product a {
+  color: #6c6c6c;
+}
+
+header .main .cont .menu .market .list .product dl {
+  width: 360px;
+  margin: 40px 0 0 40px;
+  float: left;
+}
+
+header .main .cont .menu .market .list .product dt {
+  line-height: 23px;
+  padding-left: 21px;
+  width: 336px;
+  height: 23px;
+  padding: 0 0 6px 24px;
+  border-bottom: 1px #c4c4c4 dotted;
+  float: left;
+}
+
+header .main .cont .menu .market .list .product dt a {
+  font-size: 14px;
+  font-weight: bold;
+  background: #fff;
+}
+
+header .main .cont .menu .market .list .product dd {
+  float: left;
+  margin: 12px 20px 0 0px;
+}
+
+header .main .cont .menu .market .list .product .hufu {
+  background: url(../css/img/m_nav.png) no-repeat 0 0;
+  line-height: 23px;
+  padding-left: 21px;
+}
+
+header .main .cont .menu .market .list .product .yaoz {
+  background: url(../css/img/m_nav.png) no-repeat 0 -30px;
+  line-height: 18px;
+}
+
+header .main .cont .menu .market .list .product .xihu {
+  background: url(../css/img/m_nav.png) no-repeat 0 -60px;
+  line-height: 24px;
+  padding-left: 21px;
+}
+
+header .main .cont .menu .market .list .product .caiz {
+  background: url(../css/img/m_nav.png) no-repeat 0 -90px;
+  line-height: 24px;
 }
 
 header .main .cont .info {
@@ -328,19 +397,19 @@ main {
   position: relative;
 }
 
-main .play {
+main #play {
   margin: 0 auto;
   margin-bottom: 35px;
   position: relative;
 }
 
-main .play ul {
+main #play ul {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
 
-main .play ul li {
+main #play ul li {
   width: 100%;
   height: 350px;
   overflow: hidden;
@@ -348,15 +417,15 @@ main .play ul li {
   opacity: 0;
 }
 
-main .play ul li:first-child {
+main #play ul li:first-child {
   opacity: 1;
 }
 
-main .play .page {
+main #play .page {
   position: absolute;
 }
 
-main .play .page span {
+main #play .page span {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -367,7 +436,7 @@ main .play .page span {
   color: #aaa;
 }
 
-main .play .page .active {
+main #play .page .active {
   background: #00c8ff;
 }
 
