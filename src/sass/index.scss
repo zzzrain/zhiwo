@@ -487,13 +487,14 @@ main{
     	margin-top: 35px;
 		a{
 			color: #6c6c6c;
-		}
+		}		
     	.nav{
     		margin-bottom: 12px;
 		    height: 30px;
 		    border-bottom: 1px #6c6c6c solid;
 		    ul{
 		    	float: left;
+		    	
 		    	li{
 		    		width: 140px;
 				    height: 30px;
@@ -514,6 +515,16 @@ main{
 					    display: none;
 				    }
 		    	}
+		    	.active{
+		    		color: #00c8ff;
+		    		i{
+		    			display: block;
+		    		}
+		    	}
+		    }
+		    .all{
+		    	float: right;
+    			margin-top: 2px;
 		    }
     	}
     	.prev,.next{

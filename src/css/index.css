@@ -624,6 +624,19 @@ main #brand .nav ul li i {
   display: none;
 }
 
+main #brand .nav ul .active {
+  color: #00c8ff;
+}
+
+main #brand .nav ul .active i {
+  display: block;
+}
+
+main #brand .nav .all {
+  float: right;
+  margin-top: 2px;
+}
+
 main #brand .prev, main #brand .next {
   position: absolute;
   right: 230px;
