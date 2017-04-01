@@ -15,7 +15,7 @@ $(()=>{
 	var timer;
 
 	// 添加页码
-	$('<div/>').addClass('page').appendTo('.play');
+	$('<div/>').addClass('page').appendTo('#play');
 	for(var i=1;i<=len;i++){
 		$('<span/>').appendTo('.page');
 	}
@@ -60,8 +60,8 @@ $(()=>{
 	var wechat = $('#wechat');
 	var personal = $('#personal');
 	var server = $('#server');
-	var market = $('#market');
 
+	var market = $('#market');
 	var slider = $('#slider li');
 
 	$(document).on('mouseenter','#wechat',function(){
@@ -160,15 +160,33 @@ $(()=>{
 	$('<img/>').attr({src:'img/brandL1.jpg',alt:'${item.alt}'})));
 
 	// 插入结构
-	$('#brand .cont').append($('<div/>').addClass('page clearfix').append(imgS).append(imgL));
+	$('#brand .cont').append($('<div/>').addClass('page clearfix').append([imgS,imgL]));
 
 	// 事件委托
 	$(document).on('mouseenter','#brand .nav li',function(){
+		tab($(this));
+		console.log($(this))
+	}).on('click','#brand .prev',function(){
+		var ele = $('#brand .nav').find('.active').prev();
+		if(ele.length===0){
+			ele = $('#brand .nav').find('li').eq(brandL.length-1);
+		}
+		tab(ele);
+	}).on('click','#brand .next',function(){
+		var ele = $('#brand .nav').find('.active').next();
+		if(ele.length===0){
+			ele = $('#brand .nav').find('li').eq(0);
+		}
+		tab(ele);
+	})
+
+
+	function tab(ele){
 		// 高亮
-		$(this).addClass('active').siblings().removeClass('active');
+		ele.addClass('active').siblings().removeClass('active');
 
 		// 切换(重新生成结构)
-		var idx = $(this).index();
+		var idx = ele.index();
 		$('#brand .cont .small').remove();
 		$('#brand .cont .big').remove();
 
@@ -185,46 +203,34 @@ $(()=>{
 		$('<a/>').attr('href','#').html(
 		$('<img/>').attr({src:brandL[idx],alt:'${item.alt}'})));
 
-		$('#brand .cont .page').append($(imgS)).append($(imgL));
-	});
+		$('#brand .cont .page').append([$(imgS),$(imgL)]);
+	}
 });
 
 // 生成结构
 $(()=>{
+	// 数据
+	var hotData = ['img/hot5.jpg','img/hot6.jpg','img/hot7.jpg','img/hot8.jpg'];
+	var text = '让脸蛋爆水不停的面膜！在睡眠时间给予肌肤层层水分，含有帮助锁水的维他命B5成分、NMF天然保湿因子、帮助补充水分、供给营养，具有肌肤舒缓修护的效果！轻轻揉一揉，瞬间爆出水珠，给肌肤满满的补水力量！';
 	
+	// 插入
+	for(var i=0;i<hotData.length;i++){
+		// 信息
+		var hotTime = $('<div/>').addClass('time').append($('<i/>').html('距团购结束'))
+		var hotCont = $('<div/>').addClass('cont').html($('<a/>').
+			html($('<span/>').html('7.2折/')).append(text));		
+		var hotText = $('<div/>').addClass('text clearfix').
+		append($('<p/>').addClass('price').html(`<i>￥</i><span>78</span><del>￥238.00</del>`)).
+		append($('<p/>').addClass('btn').html($('<a/>').html('加入购物车')));	
+		var hotTips = $('<div/>').addClass('tips').html(`<p class="count">已有<span>36</span>人购买</p>`)
+
+		var hotImg = $('<div/>').addClass('img').html($('<a/>').html($('<img/>').attr('src',hotData[i])));
+		var hotInfo = $('<div/>').addClass('info').append([hotTime,hotCont,hotText,hotTips]);
+		var hotHtml = $('<li/>').append([hotImg,hotInfo]);
+		$('#hot ul').append(hotHtml);
+	}
 });
 
-<li>
-	<div class="img">
-		<a href="/group/1117178.html" target="_blank">
-			<img src="img/hot1.jpg">
-		</a>
-	</div>
-	<div class="info">
-		<div class="time">
-			<i class="_downClock" diff="52476">距团购结束</i>
-			<span><span>0</span>天<span>04</span>小时<span>53</span>分<span>43</span>秒</span>
-		</div>
-		<div class="cont">
-			<a href="/group/1117178.html" target="_blank">
-				<span>3.3折/</span>
-				韩国超Q的鸡蛋补水睡眠面膜，抓住每晚黄金护肤时间~看得见的“蛋黄”+“蛋清”，给你满满补水力！自己动手DIY鸡蛋面膜，一盒蕴含满满8颗鸡蛋的营养，养出鸡蛋般Q弹美肌！
-			</a>
-		</div>
-		<div class="text clearfix">
-			<p class="price">
-				<i>￥</i><span>78</span><del>￥238.00</del>
-			</p>
-			<p class="btn">
-				<a class="put-cart embox" data="1117178_It girl鸡蛋面膜8个_78_1__" pic="http://images.zhiwo.com/product/2017/0328/817899464765877050.jpg" href="/cart/ajax/add?from=group&amp;goods_id=1117178">加入购物车
-				</a>
-			</p>
-		</div>	
-		<div class="tips">
-			<p class="count">已有<span>36</span>人购买</p>
-		</div>
-	</div>
-</li>
 
 // 滚动事件
 /*$(()=>{
