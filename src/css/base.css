@@ -19,6 +19,10 @@ i{font-style: italic;}
 	width:1100px;
 }
 
+.w960{
+    width: 960px;
+}
+
 .clearfix:after {
     content: ".";
     display: block;
