@@ -128,7 +128,7 @@ main{
 		    display: block;
 	    }
     }
-    .register{
+    .login{
 		width: 326px;
 	    height: 459px;
 	    background: #fff;
@@ -144,11 +144,6 @@ main{
 	    	p{
 	    		overflow: hidden;
 	    		font-family: '微软雅黑';
-	    		span{
-	    			font-size: 24px;
-				    color: #000;
-				    float: left;
-	    		}
 	    		a{
 	    			font-size: 16px;
 				    color: #00c8ff;
@@ -209,7 +204,13 @@ main{
 		    			}
 		    		}
 		    	}
-		    	.agree{
+		    	.help{
+		    		width: 326px;
+				    overflow: hidden;
+				    margin-bottom: 20px;
+				    
+		    	}
+		    	.load{
 		    		margin-top: 8px;
 		    		input{
 		    			width: 326px;
@@ -223,12 +224,6 @@ main{
 						border: 0;
 						padding-left: 6px;
 						cursor: pointer;
-		    		}
-		    		.xieyi{
-		    			margin-top: 4px;
-		    			a{
-		    				color: #00c8ff;
-		    			}
 		    		}
 		    	}
 		    }

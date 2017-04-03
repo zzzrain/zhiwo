@@ -160,7 +160,7 @@ main .banner a {
   display: block;
 }
 
-main .register {
+main .login {
   width: 326px;
   height: 459px;
   background: #fff;
@@ -173,47 +173,41 @@ main .register {
   padding: 30px 40px 40px;
 }
 
-main .register .title {
+main .login .title {
   margin-bottom: 30px;
 }
 
-main .register .title p {
+main .login .title p {
   overflow: hidden;
   font-family: '微软雅黑';
 }
 
-main .register .title p span {
-  font-size: 24px;
-  color: #000;
-  float: left;
-}
-
-main .register .title p a {
+main .login .title p a {
   font-size: 16px;
   color: #00c8ff;
   float: right;
   margin-top: 7px;
 }
 
-main .register .title p a span {
+main .login .title p a span {
   font-size: 12px;
   color: #c4c4c4;
   margin-top: 6px;
 }
 
-main .register .info {
+main .login .info {
   margin-bottom: 9px;
 }
 
-main .register .info form > div {
+main .login .info form > div {
   height: 54px;
 }
 
-main .register .info form .text {
+main .login .info form .text {
   position: relative;
 }
 
-main .register .info form .text input {
+main .login .info form .text input {
   width: 314px;
   height: 16px;
   border: 1px #c4c4c4 solid;
@@ -223,22 +217,22 @@ main .register .info form .text input {
   padding-left: 10px;
 }
 
-main .register .info form .error {
+main .login .info form .error {
   font-size: 12px;
   color: #ff643c;
   margin-top: 3px;
 }
 
-main .register .info form .verify .text {
+main .login .info form .verify .text {
   overflow: hidden;
 }
 
-main .register .info form .verify .text input {
+main .login .info form .verify .text input {
   width: 165px;
   float: left;
 }
 
-main .register .info form .verify .text #verify {
+main .login .info form .verify .text #verify {
   margin: 0 0 0 21px;
   float: left;
   width: 60px;
@@ -248,7 +242,7 @@ main .register .info form .verify .text #verify {
   font-size: 26px;
 }
 
-main .register .info form .verify .text #change {
+main .login .info form .verify .text #change {
   float: left;
   color: #00c8ff;
   margin: 6px 0 0 11px;
@@ -256,11 +250,17 @@ main .register .info form .verify .text #change {
   cursor: pointer;
 }
 
-main .register .info form .agree {
+main .login .info form .help {
+  width: 326px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+main .login .info form .load {
   margin-top: 8px;
 }
 
-main .register .info form .agree input {
+main .login .info form .load input {
   width: 326px;
   height: 36px;
   background: #00c8ff;
@@ -274,31 +274,23 @@ main .register .info form .agree input {
   cursor: pointer;
 }
 
-main .register .info form .agree .xieyi {
-  margin-top: 4px;
-}
-
-main .register .info form .agree .xieyi a {
-  color: #00c8ff;
-}
-
-main .register .other {
+main .login .other {
   padding-top: 16px;
   border-top: 1px #e3e3e3 dotted;
 }
 
-main .register .other ul {
+main .login .other ul {
   margin-top: 14px;
   margin-left: -20px;
 }
 
-main .register .other ul li {
+main .login .other ul li {
   height: 30px;
   float: left;
   margin-left: 20px;
 }
 
-main .register .other ul li a {
+main .login .other ul li a {
   background: url(../css/img/other.png) no-repeat 0 0;
   padding-left: 30px;
   display: block;
@@ -307,7 +299,7 @@ main .register .other ul li a {
   color: #6c6c6c;
 }
 
-main .register .other ul .qq a {
+main .login .other ul .qq a {
   font-size: 14px;
   font-family: Arial;
 }
