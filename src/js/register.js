@@ -10,13 +10,21 @@ require(['config'],function(){
 					var index = parseInt(Math.random()*str.length); //不可能大于36
 					num += str[index]
 				}
-				res.html(num.toUpperCase());
+				res.html(num);
 			}
 
 			verify($('#verify'));
 
+			// 获取cookie
+			var cookie = document.cookie;
+			if(cookie){
+				cookie = cookie.split('=');
+				$('#h-login').html('欢迎您，知我用户'+cookie[1]);
+				$('#h-register').html('[退出]');
+			}
+
 			$('form').on('click','#change',function(){
-				verify();
+				verify($('#verify'));
 			}).on('click','#agree',function(){
 				if(!/^1[34578]\d{9}$/.test($('#phone').val())){
 					alert('手机格式有误，请重新输入');
@@ -30,11 +38,21 @@ require(['config'],function(){
 					alert('两次输入的密码不匹配');
 					return false;
 				}
-				if($('.verify input').val() != $('#verify').html()){
+				/*if($('.verify input').val() != $('#verify').html()){
 					alert('验证码有误，请重新输入');
 					return false;
-				}
-				$.post('../php/register.php', {phone:$('#phone').val(),password:$('#password').val()})
+				}*/
+				$.post('../php/register.php', {phone:$('#phone').val(),password:$('#password').val()},
+					function(res){
+						$('#h-login').html('欢迎您，知我用户'+res);
+						$('#h-register').html('[退出]');
+						// 保存cookie
+						var now = new Date();
+						now.setDate(now.getDate()+3);
+						document.cookie = 'phone=' + res + ';expires=' + now;
+
+						history.back();
+					})
 			});
 
 			/*$('form').on('blur','#phone',function(){

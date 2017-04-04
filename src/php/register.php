@@ -4,13 +4,18 @@
 	 
     //准备好数据连接对象
     $con = new mysqli('localhost','root','root','zhiwo'); 
+    // 判断连接
+    if ($con->connect_error) {
+        die("连接失败: " . $con->connect_error);
+    } 
+    echo "连接成功";
   
     //获取所有用户信息
     $sql = 'select * from register';
     $res = $con->query($sql);
     // echo $sql;
 
-    //获取的用户信息与当前注册信息进行比较
+    //获取的用户信息与注册信息进行比较
     $bool = true;
     //数据库查询结果的长度 $res->num_rows
     if($res->num_rows>0){

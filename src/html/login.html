@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<title>登录页面</title>
 	<link rel="stylesheet" href="../css/base.css">
-	<link rel="stylesheet" href="../css/register.css">
-	<script src="../js/require.js" data-main="../js/register.js"></script>
+	<link rel="stylesheet" href="../css/login.css">
+	<script src="../js/require.js" data-main="../js/login.js"></script>
 </head>
 <body>
 	<div class="wrap">
@@ -15,8 +15,8 @@
 					<div class="left" id="login_status">
 						<ul class="clearfix">
 							<li>欢迎来到知我！这里，用专业呵护美丽。</li>
-							<li><a href="/account/login" rel="nofollow">请登录</a></li>
-							<li><a href="/account/signup" rel="nofollow">快速注册</a></li>
+							<li id="h-login"><a href="login.html">请登录</a></li>
+							<li id="h-register"><a href="register.html">快速注册</a></li>
 						</ul>
 					</div>
 					<div class="right">
@@ -71,7 +71,7 @@
 
 		<main>
 			<div class="banner">
-				<a style="background:url('../img/load.jpg') no-repeat center;"></a>
+				<a style="background:url('../img/zhuce.jpg') no-repeat center;"></a>
 			</div>
 			<div class="login">
 				<div class="title">
@@ -89,11 +89,6 @@
 							<!-- <p class="error">密码长度需6-16位字符</p> -->
 							<p class="error"></p>
 						</div>
-						<div class="confirm">
-							<p class="text"><input id="confirm" type="password" name="confirm" placeholder="确定密码" isvalid="false"></p>
-							<!-- <p class="error">两次输入的密码不匹配</p> -->
-							<p class="error"></p>
-						</div>
 						<div class="verify">
 							<p class="text">
 								<input type="text" name="verify" placeholder="请输入验证码" isvalid="false">
@@ -103,12 +98,13 @@
 							<p class="error"></p>
 						</div>
 						<div class="help">
-							<br><br>
-							<p class="auto"><label for="auto">自动登录</label></p>
+							<p class="auto">
+								<label class="checked" for="auto_login">自动登录</label>
+							</p>
 							<p class="forget"><a href="">忘记密码？</a></p>
 						</div>
 						<div class="load">
-							<p><input type="button" id="agree" value="登录"></p>
+							<p><input type="button" id="load" value="登录"></p>
 						</div>
 					</form>
 				</div>
