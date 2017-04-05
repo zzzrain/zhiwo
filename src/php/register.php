@@ -4,11 +4,6 @@
 	 
     //准备好数据连接对象
     $con = new mysqli('localhost','root','root','zhiwo'); 
-    // 判断连接
-    if ($con->connect_error) {
-        die("连接失败: " . $con->connect_error);
-    } 
-    echo "连接成功";
   
     //获取所有用户信息
     $sql = 'select * from register';
@@ -34,12 +29,12 @@
         //注册用户的sql语句
         $sql = 'insert into register(phone,password) values("'.$tel.'","'.$psw.'")';
         if($con->query($sql)){
-            echo "注册成功";
+            echo $tel;
         }else{
-            echo "注册失败";
+            echo "defeat";
         }
     }else{
-        echo '用户已注册';
+        echo 'defeat';
     }
 
     //关闭数据库

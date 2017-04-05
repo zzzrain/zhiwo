@@ -292,6 +292,11 @@ main .cont .list ul li .goodsImg a {
   height: 350px;
 }
 
+main .cont .list ul li .goodsImg a img {
+  width: 350px;
+  height: 350px;
+}
+
 main .cont .list ul li .goodsImg .effect {
   position: absolute;
   bottom: 0px;
@@ -300,6 +305,134 @@ main .cont .list ul li .goodsImg .effect {
   text-align: center;
   padding-left: 15px;
   display: none;
+}
+
+main .cont .list ul li .goodsImg .effect a {
+  text-align: center;
+  padding: 6px 16px;
+  border: 1px #00c8ff solid;
+  color: #00c8ff;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+main .cont .list ul li .goodsImg .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  background: #000;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  display: none;
+}
+
+main .cont .list ul li .goodsImg .over {
+  width: 162px;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  margin-left: -81px;
+  top: 50%;
+  margin-top: -40px;
+  z-index: 400;
+  display: none;
+}
+
+main .cont .list ul li .goodsInfo {
+  width: 310px;
+  height: 146px;
+  padding: 11px 20px 0;
+  background: #fff;
+}
+
+main .cont .list ul li .goodsInfo .name {
+  width: 310px;
+  height: 40px;
+  overflow: hidden;
+}
+
+main .cont .list ul li .goodsInfo .name a {
+  width: 310px;
+  height: 40px;
+  display: block;
+  line-height: 20px;
+  color: #6c6c6c;
+}
+
+main .cont .list ul li .goodsInfo .name a span {
+  font-size: 16px;
+  color: #ff643c;
+  font-weight: bold;
+}
+
+main .cont .list ul li .goodsInfo .price {
+  margin-bottom: 12px;
+}
+
+main .cont .list ul li .goodsInfo .price .num {
+  float: left;
+  margin-top: 11px;
+}
+
+main .cont .list ul li .goodsInfo .price .num i {
+  font-style: normal;
+  color: #ff643c;
+  font-size: 14px;
+  font-family: 微软雅黑;
+}
+
+main .cont .list ul li .goodsInfo .price .num span {
+  font-size: 36px;
+  color: #ff643c;
+  font-family: Arial;
+}
+
+main .cont .list ul li .goodsInfo .price .num del {
+  font-size: 14px;
+  font-family: 微软雅黑;
+  color: #c4c4c4;
+  margin-left: 10px;
+  text-decoration: line-through;
+}
+
+main .cont .list ul li .goodsInfo .price .buy {
+  width: 90px;
+  height: 26px;
+  background: #ff643c;
+  float: right;
+  margin-top: 19px;
+  line-height: 26px;
+  color: #fff;
+  text-align: center;
+}
+
+main .cont .list ul li .goodsInfo .price .buy a {
+  width: 90px;
+  height: 26px;
+  display: block;
+  text-align: center;
+  line-height: 26px;
+  color: #fff;
+}
+
+main .cont .list ul li .goodsInfo .sale {
+  color: #c4c4c4;
+  height: 40px;
+  line-height: 40px;
+  border-top: 1px #c4c4c4 dotted;
+}
+
+main .cont .list ul li .goodsInfo .sale .time {
+  float: left;
+  padding-left: 22px;
+  background: url(../css/img/icon.png) no-repeat 0 -220px;
+}
+
+main .cont .list ul li .goodsInfo .sale .count {
+  float: right;
 }
 
 footer {

@@ -199,14 +199,12 @@ require(['config'],function(){
 				$('#hot ul').append(hotHtml);
 			}
 		});
-		// 获取cookie
+		// cookie操作
 		$(()=>{
-			var cookie = document.cookie;
-			if(cookie){
-				cookie = cookie.split('=');
-				$('#h-login').html('欢迎您，知我用户'+cookie[1]);
-				$('#h-register').html('[退出]');
-			}
+			getCookie();
+			$(document).on('click','#h-register',function(){// 退出设置
+				rmCookie();
+			})
 		});
 	});
 });

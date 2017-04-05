@@ -4,6 +4,6 @@ requirejs.config({
 		'common':'common'
 	},
 	shim:{
-		
+		'common':['jquery']
 	}
 });

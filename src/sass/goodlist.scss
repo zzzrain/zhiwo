@@ -241,6 +241,10 @@ main{
 					    	display: block;
 						    width: 350px;
 						    height: 350px;
+						    img{
+						    	width: 350px;
+    							height: 350px;
+						    }
 					    }
 					    .effect{
 					    	position: absolute;
@@ -250,6 +254,117 @@ main{
 						    text-align: center;
 						    padding-left: 15px;
 						    display: none;
+						    a{
+						    	text-align: center;
+							    padding: 6px 16px;
+							    border: 1px #00c8ff solid;
+							    color: #00c8ff;
+							    margin-right: 15px;
+							    display: inline-block;
+						    }
+					    }
+					    .mask{
+					    	width: 100%;
+						    height: 100%;
+						    position: absolute;
+						    top: 0;
+						    left: 0;
+						    z-index: 300;
+						    background: #000;
+						    filter: alpha(opacity=40);
+						    opacity: 0.4;
+						    display: none;
+					    }
+					    .over{
+					    	width: 162px;
+						    height: 80px;
+						    position: absolute;
+						    left: 50%;
+						    margin-left: -81px;
+						    top: 50%;
+						    margin-top: -40px;
+						    z-index: 400;
+						    display: none;
+					    }
+				    }
+				    .goodsInfo{
+				    	width: 310px;
+					    height: 146px;
+					    padding: 11px 20px 0;
+					    background: #fff;
+					    .name{
+					    	width: 310px;
+						    height: 40px;
+						    overflow: hidden;
+						    a{
+						    	width: 310px;
+							    height: 40px;
+							    display: block;
+							    line-height: 20px;
+							    color: #6c6c6c;
+							    span{
+							    	font-size: 16px;
+								    color: #ff643c;
+								    font-weight: bold;
+							    }
+						    }
+					    }
+					    .price{
+					    	margin-bottom: 12px;
+					    	.num{
+					    		float: left;
+    							margin-top: 11px;
+    							i{
+    								font-style: normal;
+								    color: rgb(255, 100, 60);
+								    font-size: 14px;
+								    font-family: 微软雅黑;
+    							}
+    							span{
+    								font-size: 36px;
+								    color: #ff643c;
+								    font-family: Arial;
+    							}
+    							del{
+    								font-size: 14px;
+								    font-family: 微软雅黑;
+								    color: rgb(196, 196, 196);
+								    margin-left: 10px;
+								    text-decoration: line-through;
+    							}
+					    	}
+					    	.buy{
+				    		    width: 90px;
+							    height: 26px;
+							    background: #ff643c;
+							    float: right;
+							    margin-top: 19px;
+							    line-height: 26px;
+							    color: #fff;
+							    text-align: center;
+							    a{
+							    	width: 90px;
+								    height: 26px;
+								    display: block;
+								    text-align: center;
+								    line-height: 26px;
+								    color: #fff;
+							    }
+					    	}
+					    }
+					    .sale{
+					    	color: #c4c4c4;
+						    height: 40px;
+						    line-height: 40px;
+						    border-top: 1px #c4c4c4 dotted;
+						    .time{
+						    	float: left;
+						    	padding-left: 22px;
+						    	background: url(../css/img/icon.png) no-repeat 0 -220px;
+						    }
+						    .count{
+						    	float: right;
+						    }
 					    }
 				    }
    				}

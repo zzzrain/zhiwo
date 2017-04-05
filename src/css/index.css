@@ -289,13 +289,9 @@ header .nav .cont .menu .index {
   background: #00647f;
 }
 
-header .nav .cont .menu .market {
-  z-index: 380;
-}
-
-header .nav .cont .menu .market span {
+header .nav .cont .menu .market > a {
   padding-right: 11px;
-  background: url("../css/img/mainnav.png") no-repeat right -8px;
+  background: url("../css/img/mainnav.png") no-repeat right 0px;
 }
 
 header .nav .cont .menu .market .list {

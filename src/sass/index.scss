@@ -242,10 +242,9 @@ header{
     				background: #00647f;
     			}
     			.market{
-    				z-index: 380;
-    				span{
+    				&>a{
     					padding-right: 11px;
-    					background: url("../css/img/mainnav.png") no-repeat right -8px;
+    					background: url("../css/img/mainnav.png") no-repeat right 0px;
     				}
 					.list{
 						overflow: hidden;
