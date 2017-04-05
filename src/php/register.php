@@ -8,7 +8,6 @@
     //获取所有用户信息
     $sql = 'select * from register';
     $res = $con->query($sql);
-    // echo $sql;
 
     //获取的用户信息与注册信息进行比较
     $bool = true;

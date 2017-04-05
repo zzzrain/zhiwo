@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>知我药妆</title>
 	<link rel="stylesheet" href="../css/base.css">
-	<link rel="stylesheet" href="../css/goodlist.css">
-	<script src="../js/require.js" data-main="../js/goodlist.js"></script>
+	<link rel="stylesheet" href="../css/goods.css">
+	<script src="../js/require.js" data-main="../js/goods.js"></script>
 </head>
 <body>
 	<div class="wrap">
@@ -22,15 +21,15 @@
 					</div>
 					<div class="right">
 						<ul class="clearfix">
-							<li class="public" id="wechat">
+							<li class="public clearfix" id="wechat">
 								<a href=""><span>微信商城</span><i></i></a>
-								<div class="wechat"><img src="../img/wechat.jpg"></div>
+								<div class="wechat"><img src="img/wechat.jpg"></div>
 							</li>
 							<li class="phone">
-								<a href="/app.html" rel="nofollow">手机知我</a>
+								<a href="">手机知我</a>
 							</li>
 							<li class="public" id="personal">
-								<a href="" rel="nofollow"><span>我的小窝</span><i></i></a>
+								<a href=""><span>我的小窝</span><i></i></a>
 								<div class="personal">
 									<ul>
 										<li><a href="/order/list" rel="nofollow">我的订单</a></li>
@@ -43,7 +42,7 @@
 							</li>
 							<li class="line">|</li>
 							<li class="public" id="server">
-								<a href="http://www.zhiwo.com/help/main.html" target="_blank" rel="nofollow">
+								<a href="http://www.zhiwo.com/help/main.html" target="_blank">
 									<span>客户服务</span><i></i>
 								</a>
 								<div class="server">
@@ -63,7 +62,7 @@
 			<div class="center">
 				<div class="cont clearfix w1100">
 					<div class="logo">
-						<a href="/"><img src="../img/logo.jpg" alt="知我药妆"></a>
+						<a href="/"><img src="img/logo.jpg" alt="知我药妆"></a>
 					</div>
 					<div class="search">
 						<form class="clearfix" action="/product/search" method="get">
@@ -89,46 +88,91 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="nav">
+				<div class="cont w1100">
+					<div class="menu">
+						<ul class="clearfix">
+							<li class="index">
+								<a href="">首页</a>
+							</li>
+							<li class="market">
+								<a href="" id="market">知我商城</a>
+								<div class="list clearfix">
+									<div class="product clearfix">
+										<dl class="clearfix ">
+											<dt class="hufu"><a>护肤</a></dt>
+											<dd><a href="/products/c24">面膜面贴</a></dd>
+											<dd><a href="/products/c36">乳液凝露</a></dd>
+											<dd><a href="/products/c40">洁面卸妆</a></dd>
+											<dd><a href="/products/c143">眼精华/眼霜</a></dd>
+											<dd><a href="/products/c157">防晒隔离</a></dd>
+											<dd><a href="/products/c25">化妆水爽肤水</a></dd>
+											<dd><a href="/products/c146">眼膜/眼贴</a></dd>
+											<dd><a href="/products/c27">精华</a></dd>
+										</dl>
+										<dl class="clearfix">
+											<dt class="yaoz"><a>药妆</a></dt>
+											<dd><a href="/products/c174">乳液面霜</a></dd>
+											<dd><a href="/products/c173">洁面卸妆</a></dd>
+											<dd><a href="/products/c182">面部精华</a></dd>
+											<dd><a href="/products/c175">化妆水爽肤水</a></dd>
+											<dd><a href="/products/c176">面膜面贴</a></dd>
+											<dd><a href="/products/c26">喷雾</a></dd>
+											<dd><a href="/products/c178">眼精华/眼霜</a></dd>
+											<dd><a href="/products/c165">防晒隔离</a></dd>
+										</dl>
+									</div>
+									<div class="product clearfix">
+										<dl class="clearfix">
+											<dt class="xihu"><a>洗护</a></dt>
+											<dd><a href="/products/c212">洗发护发</a></dd>
+											<dd><a href="/products/c224">口腔护理</a></dd>
+											<dd><a href="/products/c186">沐浴润体</a></dd>
+											<dd><a href="/products/c207">身体乳霜</a></dd>
+											<dd><a href="/products/c157">手足护理</a></dd>
+											<dd><a href="/products/c215">美体瘦身</a></dd>
+											<dd><a href="/products/c157">防晒隔离</a></dd>
+											<dd><a href="/products/c213">润唇膏</a></dd>
+										</dl>
+										<dl class="clearfix">
+											<dt class="caiz"><a>彩妆香氛</a></dt>
+											<dd><a href="/products/c78">唇彩/口红</a></dd>
+											<dd><a href="/products/c136">女士香水</a></dd>
+											<dd><a href="/products/c80">粉饼/蜜粉</a></dd>
+											<dd><a href="/products/c137">男士香水</a></dd>
+											<dd><a href="/products/c57">睫毛</a></dd>
+											<dd><a href="/products/c56">眼线</a></dd>
+											<dd><a href="/products/c73">腮红/胭脂</a></dd>
+											<dd><a href="/products/c153">粉底/妆前乳</a></dd>
+											<dd><a href="/products/c55">眼影/彩妆盘</a></dd>
+											<dd><a href="/products/c61">BB霜/CC霜</a></dd>
+										</dl>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="">
+									<img class="img" src="img/home_overseas.gif">
+									<img class="" src="img/home_overseas_current.gif">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="info">
+						<ul class="clearfix" id="slider">
+							<li class="baidu"><span>百度投资</span></li>
+							<li class="quality"><span>真品保证</span></li>
+							<li class="postage"><span>139元包邮</span></li>
+							<li class="return"><span>30天无理由退换货</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</header>
 
 		<main>
-			<div class="cont w1100">
-				<h2><span>今日新品</span><span>HOT DEALS TODAY</span></h2>
-				<div class="list">
-					<ul>
-						<li>
-			                <div class="goodsImg">
-			                    <a class="show" href="" target="_blank">
-			                    	<img src="../img/goods01.jpg">
-			                    </a>
-			                    <div class="effect">
-			                    	<a href="" target="_blank">舒缓</a>
-			                        <a href="" target="_blank">去角质</a>
-			                    </div>
-			                    <div class="mask"></div>
-			                    <div class="over">
-			                        <p>已抢光</p>
-			                    </div>
-			                </div>
-			                <div class="goodsInfo">
-			                    <div class="name">
-			                    	<a href="">
-			                    		<span>2.8折</span>雅诗兰黛红石榴鲜养焕亮精华露4ml*2，时刻保持鲜活红润好气色。
-			                    	</a>
-			                    </div>
-			                    <div class="price clearfix">
-			                    	<p class="num"><i>￥</i><span>49</span><del>￥174.00</del></p>
-			                    	<p class="buy"><a href="">加入购物车</a></p>
-			                    </div>
-			                    <div class="sale clearfix">
-			                   		<p class="time"><i>距团购结束</i><span><span>1</span>天<span>03</span>小时<span>50</span>分<span>34</span>秒</span></p>
-			                    	<p class="count"><span>603</span>人已购买</p>
-			                    </div>
-			                </div>
-			            </li>
-					</ul>
-				</div>
-			</div>
+			
 		</main>
 
 		<footer>
@@ -208,93 +252,6 @@
 					<img src="img/footer_copy_03.jpg" alt="快捷支付">
 					<img src="img/footer_copy_05.jpg" alt="网上交易保障中心">
 				</p>
-			</div>
-
-			<div class="sidebar" id="sidebar">
-				<div class="panel">
-					<ul class="partone">
-						<li id="login" class="login">
-							<a class="sitem" href="javascript:;">
-								<i></i>
-							</a>
-							<div class="tip">
-								<a href="/account/login" rel="nofollow">登录</a>
-								<span>|</span>
-								<a href="/account/signup" rel="nofollow">注册</a>
-								<i class="triangle"></i>
-							</div>
-						</li>
-						<li id="shopcar" class="shopcar">
-							<a class="sitem" href="javascript:;">
-								<i></i>
-								<span class="text">购物车</span>
-								<span class="count">0</span>
-							</a>
-						</li>
-						<li id="like" class="like">
-							<a class="sitem" href="javascript:;">
-								<i></i>
-							</a>
-							<div class="tip">
-								<span>我的收藏</span>
-								<i class="triangle"></i>
-							</div>
-						</li>
-						<li id="foot" class="foot">
-							<a class="sitem" href="javascript:;">
-								<i></i>
-							</a>
-							<div class="tip">
-								<span>我看过的</span>
-								<i class="triangle"></i>
-							</div>
-						</li>
-					</ul>
-					<ul class="sidebar_panel_parttwo">
-						<li id="sidebar_wechat" class="sidebar_item sidebar_wechat">
-							<a class="sitem" href="javascript:;">
-								<i></i>
-							</a>					
-							<div class="tip clearfix" style="display: none;">
-								<div class="sidebar_ewm_box">
-									<img src="http://images.zhiwo.com/product/2016/1228/wechat_ewm1.jpg" alt="知我微信商城二维码">
-									<span>知我微信商城</span>
-									<i class="triangle"></i>
-								</div>
-								<div class="sidebar_ewm_box">
-									<img src="http://images.zhiwo.com/product/2016/0523/android_ewm.png" alt="Android版下载">
-									<span>Android版APP下载</span>
-									<i class="triangle"></i>
-								</div>
-								<div class="sidebar_ewm_box">
-									<img src="http://images.zhiwo.com/product/2016/0523/iphone_ewm.png" alt="Android版下载">
-									<span>iPhone版APP下载</span>
-									<i class="triangle"></i>
-								</div>
-							</div>
-						</li>
-						<li id="sidebar_servers" class="sidebar_item sidebar_servers">
-							<a class="sitem" href="javascript:;">
-								<i></i>
-							</a>
-							<div class="tip">
-								<span>客服中心</span>
-								<i class="triangle"></i>
-							</div>
-						</li>
-						<li id="sidebar_top" class="sidebar_item sidebar_top">
-							<a class="sitem" href="javascript:;">
-								<i class="up_triangle"></i>
-								<span class="go_top">TOP</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="content" id="content" style="left: 35px;">
-					<div class="nav_content" id="sidebar_shopcar_cont"></div>
-					<div class="nav_content" id="sidebar_collect_cont"></div>
-					<div class="nav_content" id="sidebar_foot_cont"></div>
-				</div>
 			</div>
 		</footer>
 	</div>

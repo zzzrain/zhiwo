@@ -262,16 +262,16 @@ main .cont h2 span {
   margin-right: 12px;
 }
 
-main .cont .list {
+main .cont #goodslist {
   width: 1100px;
-  margin-top: -8px;
+  margin: -8px 0 50px 0;
 }
 
-main .cont .list ul {
+main .cont #goodslist ul {
   margin-left: -25px;
 }
 
-main .cont .list ul li {
+main .cont #goodslist ul li {
   float: left;
   width: 350px;
   height: 507px;
@@ -279,25 +279,25 @@ main .cont .list ul li {
   position: relative;
 }
 
-main .cont .list ul li .goodsImg {
+main .cont #goodslist ul li .goodsImg {
   width: 350px;
   height: 350px;
   position: relative;
   background: #fff;
 }
 
-main .cont .list ul li .goodsImg a {
+main .cont #goodslist ul li .goodsImg a {
   display: block;
   width: 350px;
   height: 350px;
 }
 
-main .cont .list ul li .goodsImg a img {
+main .cont #goodslist ul li .goodsImg a img {
   width: 350px;
   height: 350px;
 }
 
-main .cont .list ul li .goodsImg .effect {
+main .cont #goodslist ul li .goodsImg .effect {
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -307,7 +307,7 @@ main .cont .list ul li .goodsImg .effect {
   display: none;
 }
 
-main .cont .list ul li .goodsImg .effect a {
+main .cont #goodslist ul li .goodsImg .effect a {
   text-align: center;
   padding: 6px 16px;
   border: 1px #00c8ff solid;
@@ -316,7 +316,7 @@ main .cont .list ul li .goodsImg .effect a {
   display: inline-block;
 }
 
-main .cont .list ul li .goodsImg .mask {
+main .cont #goodslist ul li .goodsImg .mask {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -329,7 +329,7 @@ main .cont .list ul li .goodsImg .mask {
   display: none;
 }
 
-main .cont .list ul li .goodsImg .over {
+main .cont #goodslist ul li .goodsImg .over {
   width: 162px;
   height: 80px;
   position: absolute;
@@ -341,20 +341,20 @@ main .cont .list ul li .goodsImg .over {
   display: none;
 }
 
-main .cont .list ul li .goodsInfo {
+main .cont #goodslist ul li .goodsInfo {
   width: 310px;
   height: 146px;
   padding: 11px 20px 0;
   background: #fff;
 }
 
-main .cont .list ul li .goodsInfo .name {
+main .cont #goodslist ul li .goodsInfo .name {
   width: 310px;
   height: 40px;
   overflow: hidden;
 }
 
-main .cont .list ul li .goodsInfo .name a {
+main .cont #goodslist ul li .goodsInfo .name a {
   width: 310px;
   height: 40px;
   display: block;
@@ -362,35 +362,35 @@ main .cont .list ul li .goodsInfo .name a {
   color: #6c6c6c;
 }
 
-main .cont .list ul li .goodsInfo .name a span {
+main .cont #goodslist ul li .goodsInfo .name a span {
   font-size: 16px;
   color: #ff643c;
   font-weight: bold;
 }
 
-main .cont .list ul li .goodsInfo .price {
+main .cont #goodslist ul li .goodsInfo .price {
   margin-bottom: 12px;
 }
 
-main .cont .list ul li .goodsInfo .price .num {
+main .cont #goodslist ul li .goodsInfo .price .num {
   float: left;
   margin-top: 11px;
 }
 
-main .cont .list ul li .goodsInfo .price .num i {
+main .cont #goodslist ul li .goodsInfo .price .num i {
   font-style: normal;
   color: #ff643c;
   font-size: 14px;
   font-family: 微软雅黑;
 }
 
-main .cont .list ul li .goodsInfo .price .num span {
+main .cont #goodslist ul li .goodsInfo .price .num span {
   font-size: 36px;
   color: #ff643c;
   font-family: Arial;
 }
 
-main .cont .list ul li .goodsInfo .price .num del {
+main .cont #goodslist ul li .goodsInfo .price .num del {
   font-size: 14px;
   font-family: 微软雅黑;
   color: #c4c4c4;
@@ -398,7 +398,7 @@ main .cont .list ul li .goodsInfo .price .num del {
   text-decoration: line-through;
 }
 
-main .cont .list ul li .goodsInfo .price .buy {
+main .cont #goodslist ul li .goodsInfo .price .buy {
   width: 90px;
   height: 26px;
   background: #ff643c;
@@ -409,7 +409,7 @@ main .cont .list ul li .goodsInfo .price .buy {
   text-align: center;
 }
 
-main .cont .list ul li .goodsInfo .price .buy a {
+main .cont #goodslist ul li .goodsInfo .price .buy a {
   width: 90px;
   height: 26px;
   display: block;
@@ -418,20 +418,20 @@ main .cont .list ul li .goodsInfo .price .buy a {
   color: #fff;
 }
 
-main .cont .list ul li .goodsInfo .sale {
+main .cont #goodslist ul li .goodsInfo .sale {
   color: #c4c4c4;
   height: 40px;
   line-height: 40px;
   border-top: 1px #c4c4c4 dotted;
 }
 
-main .cont .list ul li .goodsInfo .sale .time {
+main .cont #goodslist ul li .goodsInfo .sale .time {
   float: left;
   padding-left: 22px;
   background: url(../css/img/icon.png) no-repeat 0 -220px;
 }
 
-main .cont .list ul li .goodsInfo .sale .count {
+main .cont #goodslist ul li .goodsInfo .sale .count {
   float: right;
 }
 
@@ -586,20 +586,27 @@ footer .sidebar .panel {
   background: #6c6c6c;
 }
 
-footer .sidebar .panel .sitem {
+footer .sidebar .panel li {
+  position: relative;
+}
+
+footer .sidebar .panel li > a {
   display: block;
   width: 35px;
 }
 
-footer .sidebar .panel .sitem i {
+footer .sidebar .panel li > a:hover {
+  background-color: #00c8ff;
+}
+
+footer .sidebar .panel li > a i {
   display: block;
   width: 35px;
   height: 35px;
-  background: url(/sidebarico.png) no-repeat;
+  background: url(../css/img/sidebarico.png) no-repeat;
 }
 
-footer .sidebar .panel .tip {
-  opacity: 0;
+footer .sidebar .panel li .tool_tip {
   width: 103px;
   height: 35px;
   line-height: 35px;
@@ -607,25 +614,9 @@ footer .sidebar .panel .tip {
   text-align: center;
   color: #fff;
   position: absolute;
-}
-
-footer .sidebar .panel .tip a {
-  color: #fff;
-}
-
-footer .sidebar .panel .tip span {
-  margin: 0 10px;
-}
-
-footer .sidebar .panel .tip i {
-  position: absolute;
-  right: -8px;
-  top: 14px;
-  width: 0;
-  height: 0;
-  border-width: 4px;
-  border-style: dashed dashed dashed solid;
-  border-color: transparent transparent transparent #6c6c6c;
+  top: 0;
+  left: 0px;
+  display: none;
 }
 
 footer .sidebar .panel .partone {
@@ -637,17 +628,13 @@ footer .sidebar .panel .partone {
   background: #6c6c6c;
 }
 
-footer .sidebar .panel .partone li {
-  position: relative;
-}
-
 footer .sidebar .panel .partone .login {
   margin-bottom: 21px;
 }
 
 footer .sidebar .panel .partone .shopcar {
-  margin-bottom: 26px;
   height: 126px;
+  margin-bottom: 26px;
 }
 
 footer .sidebar .panel .partone .shopcar i {
@@ -667,8 +654,7 @@ footer .sidebar .panel .partone .shopcar .count {
   width: 35px;
   height: 35px;
   line-height: 32px;
-  background: url(sidebarico.png) no-repeat 0 -210px;
-  font-family: Arial;
+  background: url(../css/img/sidebarico.png) no-repeat 0 -210px;
   font-size: 14px;
 }
 
@@ -690,4 +676,40 @@ footer .sidebar .panel .parttwo {
   left: 0;
   z-index: 9;
   background: #6c6c6c;
+}
+
+footer .sidebar .panel .parttwo .wechat {
+  margin-bottom: 10px;
+}
+
+footer .sidebar .panel .parttwo .wechat > a i {
+  background-position: 0 -140px;
+}
+
+footer .sidebar .panel .parttwo .server {
+  margin-bottom: 30px;
+}
+
+footer .sidebar .panel .parttwo .server > a i {
+  background-position: 0 -175px;
+}
+
+footer .sidebar .panel .parttwo .top {
+  width: 35px;
+  height: 35px;
+}
+
+footer .sidebar .panel .parttwo .top .up_triangle {
+  width: 0;
+  height: 0;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 3px;
+  border-width: 5px;
+  border-style: dashed dashed solid dashed;
+  border-color: transparent transparent #fff transparent;
+}
+
+footer .sidebar .panel .parttwo .top span {
+  color: #fff;
 }

@@ -8,7 +8,6 @@
     //获取所有用户信息
     $sql = 'select * from register';
     $res = $con->query($sql);
-    // echo $sql;
 
 
     //数据库查询结果的长度 $res->num_rows

@@ -221,9 +221,9 @@ main{
 		    	margin-right: 12px;
 		    }
 		}
-		.list{
+		#goodslist{
 			width: 1100px;
-   			margin-top: -8px;
+   			margin: -8px 0 50px 0;
    			ul{
    				margin-left: -25px;
    				li{
@@ -486,40 +486,32 @@ footer{
 		    left: 0;
 		    z-index: 20;
 		    background: #6c6c6c;
-		    .sitem{
-		    	display: block;
-    			width: 35px;
-	    		i{
-			    	display: block;
-				    width: 35px;
+		    li{
+				position: relative;
+				&>a{
+					display: block;
+    				width: 35px;
+    				&:hover{
+    					background-color: #00c8ff;
+    				}
+    				i{
+    					display: block;
+					    width: 35px;
+					    height: 35px;
+					    background: url(../css/img/sidebarico.png) no-repeat;
+    				}
+				}
+				.tool_tip{
+			    	width: 103px;
 				    height: 35px;
-				    background: url(/sidebarico.png) no-repeat;
-			    }
-		    }
-		    .tip{
-			    opacity: 0;
-			    width: 103px;
-			    height: 35px;
-			    line-height: 35px;
-			    background: #6c6c6c;
-			    text-align: center;
-			    color: #fff;
-			    position: absolute;
-			    a{
-			    	color: #fff;
-			    }
-			    span{
-			    	margin: 0 10px;
-			    }
-			    i{
-			    	position: absolute;
-				    right: -8px;
-				    top: 14px;
-				    width: 0;
-				    height: 0;
-				    border-width: 4px;
-				    border-style: dashed dashed dashed solid;
-				    border-color: transparent transparent transparent #6c6c6c;
+				    line-height: 35px;
+				    background: #6c6c6c;
+				    text-align: center;
+				    color: #fff;
+				    position: absolute;
+				    top: 0;
+				    left: 0px;
+				    display: none;
 			    }
 		    }
 		    .partone{
@@ -529,15 +521,12 @@ footer{
 			    left: 0;
 			    z-index: 10;
 			    background: #6c6c6c;
-			    li{
-			    	position: relative;
-			    }
 			    .login{
 			    	margin-bottom: 21px;
 			    }
 			    .shopcar{
-			    	margin-bottom: 26px;
 			    	height: 126px;
+			    	margin-bottom: 26px;
 			    	i{
 						background-position: 0 -35px;
 			    	}
@@ -553,8 +542,7 @@ footer{
 					    width: 35px;
 					    height: 35px;
 					    line-height: 32px;
-					    background: url(sidebarico.png) no-repeat 0 -210px;
-					    font-family: Arial;
+					    background: url(../css/img/sidebarico.png) no-repeat 0 -210px;
 					    font-size: 14px;
 			    	}
 			    }
@@ -565,7 +553,6 @@ footer{
 			    			background-position: 0 -70px;
 			    		}
 			    	}
-
 			    }
 			    .foot{
 			    	a{
@@ -581,6 +568,39 @@ footer{
 			    left: 0;
 			    z-index: 9;
 			    background: #6c6c6c;
+			    .wechat{
+			    	margin-bottom: 10px;
+			    	&>a{
+			    		i{
+			    			background-position: 0 -140px;
+			    		}
+			    	}
+			    }
+			    .server{
+			    	margin-bottom: 30px;
+			    	&>a{
+			    		i{
+			    			background-position: 0 -175px;
+			    		}
+			    	}
+			    }
+			    .top{
+			    	width: 35px;
+    				height: 35px;
+    				.up_triangle{
+    					width: 0;
+					    height: 0;
+					    display: block;
+					    margin: 0 auto;
+					    margin-bottom: 3px;
+					    border-width: 5px;
+					    border-style: dashed dashed solid dashed;
+					    border-color: transparent transparent #fff transparent;
+    				}
+    				span{
+    					color: #fff;
+    				}
+			    }
 		    }
 	    }
     }
