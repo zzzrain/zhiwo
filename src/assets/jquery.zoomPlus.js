@@ -7,10 +7,8 @@
     // jQuery.prototype.zoom = function(){}
     $.fn.zoom = function(opt){
         var defaults = {
-            width:480,
-            height:300,
-            position:'right',
             gap:20,
+            position:'right',
             zoomColor:'rgba(255,255,0,0.3)'
         }
         // ES6方法
@@ -20,8 +18,8 @@
         var opt = $.extend(true,defaults,opt);
 
         // 遍历以便多次使用
-        this.each(function() {
-            // 获取全局变量
+        return this.each(function() {
+            // 获取全局变量、添加插件属性
             var $wrap = $(this).addClass('zoom-wrap'); 
             var $imgX = $(this).children('img');
             var $ratio;
@@ -39,6 +37,7 @@
                     top: $imgX.offset().top
                 });*/
 
+                // 大图位置
                 if(opt.position){
                     var left = $imgX.offset().left + $imgX.outerWidth() + opt.gap;
                     var top = $imgX.offset().top;
@@ -52,7 +51,7 @@
                     $large.css({left:left,top:top});
                 }
 
-                $large.css({width:opt.width,height:opt.height});
+                $large.css({width:$imgX.outerWidth(),height:$imgX.outerHeight()});
                 
                 $wrap.mouseenter(e=>{
                     $zoom.show();
@@ -91,7 +90,7 @@
                     $large.hide();
                 });
 
-                function enter(){
+                /*function enter(){
                     $zoom.show();
                     $large.show();
 
@@ -123,9 +122,8 @@
                 function leave(){
                     $zoom.hide();
                     $large.hide();
-                }
+                }*/
             }
         });
-        return this;
     }
 })(jQuery);

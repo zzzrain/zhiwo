@@ -358,10 +358,9 @@ main{
     		}
 		}
 		.today{
-			background: #fff;
-		    margin-bottom: 5px;
-		    position: relative;
 		    min-height: 150px;
+			background: #fff;
+		    position: relative;
 		    .text{
 		    	width: 570px;
 			    font-size: 16px;
@@ -396,7 +395,7 @@ main{
 		    background: #fff;
 		    margin: 30px 0;
 		    padding: 40px;
-			#goodsImg{
+			.goodsImg{
 				float: left;
 				width: 350px;
 				height: 350px;
@@ -404,6 +403,9 @@ main{
 					display: block;
 				    width: 350px;
 				    height: 350px;
+				}
+				.cloneImg{
+					position: absolute;
 				}
 			}
 			.goodsInfo{
@@ -507,7 +509,7 @@ main{
 						    height: 45px;
 						    float: left;
 						    margin-right: 35px;
-						    a{
+						    span{
 						    	display: block;
 								width: 137px;
 								height: 45px;
@@ -855,5 +857,9 @@ footer{
 			    }
 		    }
 	    }
+    }
+    .carlist{
+    	width: 360px;
+    	
     }
 }

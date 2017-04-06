@@ -1,22 +1,25 @@
 require(['config'],function(){
 	require(['jquery','common'],function(){
 		$(()=>{	
-			$.post('../php/goodslist.php',{page:1},callback);
+			$.post('../php/goodslist.php',{page:idx},callback);
 
 			// 懒加载效果
-			var idx = 1;	
+			var idx = 1	
 			var page = idx;	
+			var scroll = 1;
+
 			$(window).scroll(e=>{
 				// 临界高度
 				var high = $('main').outerHeight()-$('footer').outerHeight();
-				//console.log($(this).scrollTop(),$('main').outerHeight())
+				console.log($(this).scrollTop(),$('main').outerHeight())
 
 				if($(this).scrollTop() > high){
-					page++;
-					console.log(page)
-					$.post('../php/goodslist.php',{page:page},callback);
-					// 重置
-					idx = page;
+					//if(page === idx) {return;}				
+					if(scroll){	
+						scroll = 0;										
+						console.log(idx)
+						$.post('../php/goodslist.php',{page:idx},callback);
+					}
 				}
 			});
 
@@ -55,6 +58,11 @@ require(['config'],function(){
 					</li>`
 				}).join('');
 				$('#goodslist ul').html(goods);
+
+				// 重置
+				idx++;
+				page = idx;
+				scroll = 1;
 			}
 		})
 	});

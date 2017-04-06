@@ -432,10 +432,9 @@ main .cont > .title .self {
 }
 
 main .cont .today {
-  background: #fff;
-  margin-bottom: 5px;
-  position: relative;
   min-height: 150px;
+  background: #fff;
+  position: relative;
 }
 
 main .cont .today .text {
@@ -478,16 +477,20 @@ main .cont .goods {
   padding: 40px;
 }
 
-main .cont .goods #goodsImg {
+main .cont .goods .goodsImg {
   float: left;
   width: 350px;
   height: 350px;
 }
 
-main .cont .goods #goodsImg img {
+main .cont .goods .goodsImg img {
   display: block;
   width: 350px;
   height: 350px;
+}
+
+main .cont .goods .goodsImg .cloneImg {
+  position: absolute;
 }
 
 main .cont .goods .goodsInfo {
@@ -613,7 +616,7 @@ main .cont .goods .goodsInfo .buyer .buy .add {
   margin-right: 35px;
 }
 
-main .cont .goods .goodsInfo .buyer .buy .add a {
+main .cont .goods .goodsInfo .buyer .buy .add span {
   display: block;
   width: 137px;
   height: 45px;
@@ -1013,4 +1016,8 @@ footer .sidebar .panel .parttwo .top .up_triangle {
 
 footer .sidebar .panel .parttwo .top span {
   color: #fff;
+}
+
+footer .carlist {
+  width: 360px;
 }
