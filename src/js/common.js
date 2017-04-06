@@ -7,40 +7,6 @@ $(()=>{
 	var market = $('#market');
 	var slider = $('#slider li');
 
-	/*$('header').mouseover(function(e){
-		switch (e.target.id.toLowerCase()){
-			case 'wechat' : 
-			wechat.children('div').animate({height: 100});
-			break;
-			case 'personal' : 
-			personal.children('div').animate({height: 150});
-			break;
-			case 'server' : 
-			server.children('div').animate({height: 120});
-			break;
-			case 'market' : 
-			market.children('.list').animate({height: 304});
-			break;
-		}
-	});	*/			
-	
-	/*$('header').mouseout(function(e){
-		switch (e.target.id.toLowerCase()){
-			case 'wechat' : 
-			wechat.children('div').animate({height: 0});
-			break;
-			case 'personal' : 
-			personal.children('div').animate({height: 0});
-			break;
-			case 'server' : 
-			server.children('div').animate({height: 0});
-			break;
-			case 'market' : 
-			market.children('.list').animate({height: 0});
-			break;
-		}
-	});*/
-
 	$('header').on('mouseenter','#wechat',function(){
 		wechat.children('div').animate({height: 100});	
 	}).on('mouseenter','#personal',function(){
@@ -62,6 +28,40 @@ $(()=>{
 	}).on('mouseleave','#slider li',function(){
 		$(this).animate({width: 0})
 	})	
+
+	/*$('header').mouseover(function(e){
+		switch (e.target.id.toLowerCase()){
+			case 'wechat' : 
+			wechat.children('div').animate({height: 100});
+			break;
+			case 'personal' : 
+			personal.children('div').animate({height: 150});
+			break;
+			case 'server' : 
+			server.children('div').animate({height: 120});
+			break;
+			case 'market' : 
+			market.children('.list').animate({height: 304});
+			break;
+		}
+	});	*/
+	
+	/*$('header').mouseout(function(e){
+		switch (e.target.id.toLowerCase()){
+			case 'wechat' : 
+			wechat.children('div').animate({height: 0});
+			break;
+			case 'personal' : 
+			personal.children('div').animate({height: 0});
+			break;
+			case 'server' : 
+			server.children('div').animate({height: 0});
+			break;
+			case 'market' : 
+			market.children('.list').animate({height: 0});
+			break;
+		}
+	});*/
 });
 
 // 验证码函数

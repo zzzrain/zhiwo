@@ -1,9 +1,11 @@
 requirejs.config({
 	paths:{
 		'jquery':'jquery-3.1.0.min',
-		'common':'common'
+		'common':'common',
+		'zoom':'../assets/jquery.zoomPlus'
 	},
 	shim:{
-		'common':['jquery']
+		'common':['jquery'],
+		'zoom':['jquery']
 	}
 });
