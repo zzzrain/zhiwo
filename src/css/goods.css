@@ -873,7 +873,7 @@ footer .copyright a {
 footer .sidebar {
   width: 35px;
   position: fixed;
-  top: 0;
+  top: 0px;
   right: 0px;
   z-index: 1000;
   min-height: 100%;
@@ -1018,6 +1018,149 @@ footer .sidebar .panel .parttwo .top span {
   color: #fff;
 }
 
-footer .carlist {
-  width: 360px;
+footer .sidebar .carlist {
+  width: 280px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: -300px;
+  background: #fff;
+  padding: 10px;
+}
+
+footer .sidebar .carlist h2 {
+  font-weight: normal;
+  font-size: 18px;
+  color: #000;
+  font-family: '微软雅黑';
+  overflow: hidden;
+  height: 42px;
+  border-bottom: 1px dotted #ccc;
+}
+
+footer .sidebar .carlist li {
+  width: 260px;
+  border-bottom: 1px #e3e3e3 dotted;
+  padding: 20px 0;
+}
+
+footer .sidebar .carlist li .goodsimg {
+  float: left;
+  width: 78px;
+  height: 78px;
+  border: 1px #e4e4e4 solid;
+}
+
+footer .sidebar .carlist li .goodsimg img {
+  display: block;
+  width: 78px;
+  height: 78px;
+}
+
+footer .sidebar .carlist li .goodsinfo {
+  float: right;
+  width: 170px;
+}
+
+footer .sidebar .carlist li .goodsinfo > p {
+  margin-top: 8px;
+  margin-bottom: 10px;
+  height: 36px;
+}
+
+footer .sidebar .carlist li .goodsinfo > div > span {
+  width: 53px;
+  font-family: '微软雅黑';
+  font-size: 14px;
+  color: #ff643c;
+  float: left;
+  margin-right: 6px;
+  height: 24px;
+  line-height: 24px;
+}
+
+footer .sidebar .carlist li .goodsinfo > div > p {
+  width: 77px;
+  height: 24px;
+  float: left;
+  border: 1px #e4e4e4 solid;
+}
+
+footer .sidebar .carlist li .goodsinfo > div > p input {
+  font-weight: normal;
+  width: 29px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  float: left;
+  font-family: Arial;
+  font-size: 14px;
+  border: 0;
+}
+
+footer .sidebar .carlist li .goodsinfo > div > p span {
+  width: 24px;
+  height: 24px;
+  float: left;
+  cursor: pointer;
+}
+
+footer .sidebar .carlist li .goodsinfo > div > p .down {
+  background: url(../css/img/updown.png) no-repeat 0 -24px;
+}
+
+footer .sidebar .carlist li .goodsinfo > div > p .up {
+  background: url(../css/img/updown.png) no-repeat 0 0;
+}
+
+footer .sidebar .carlist li .goodsinfo > div > a {
+  color: #6c6c6c;
+  text-decoration: underline;
+  float: right;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+footer .sidebar .carlist .account {
+  padding: 10px 0;
+  position: relative;
+}
+
+footer .sidebar .carlist .account .num span {
+  color: #ff643c;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 2px;
+}
+
+footer .sidebar .carlist .account .rmb span {
+  color: #ff643c;
+  font-size: 14px;
+  font-family: '微软雅黑';
+  margin: 0 3px 0 4px;
+}
+
+footer .sidebar .carlist .account .rmb em {
+  color: #ff643c;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+footer .sidebar .carlist .account .car {
+  width: 90px;
+  height: 26px;
+  background: #ff643c;
+  position: absolute;
+  top: 19px;
+  right: 0;
+}
+
+footer .sidebar .carlist .account .car a {
+  display: block;
+  width: 90px;
+  height: 26px;
+  color: #fff;
+  text-align: center;
+  line-height: 26px;
 }

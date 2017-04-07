@@ -141,9 +141,36 @@ require(['config'],function(){
 
 				// 飞入效果
 				$('.add span').click(function(){
+					// 运动距离
+					var wide = $('.sidebar').offset().left-$('.goodsImg img').offset().left-78;
 					var target = $(this).parents('.goodsInfo').siblings('.goodsImg').find('img').
 					clone().css({left:0,top:0}).addClass('cloneImg').appendTo('.goodsImg').
-				})
+					// 加入列表
+					animate({left: wide,width:78,height:78},1000,function(){
+						$('.cloneImg').remove();
+						$('.carlist ul').append($('<li/>').addClass('clearfix').html(`
+							<div class="goodsimg">
+								<a href=""><img src=""></a></div>
+							<div class="goodsinfo">
+								<p><a href="">丽得姿二代抗皱提拉面膜10片</a></p>
+								<div class="clearfix">
+									<span class="price">￥85.0</span>
+									<p class="amount clearfix">
+										<span class="down"></span>
+										<input type="text" value="1">
+										<span class="up"></span>
+									</p>
+									<a>删除</a>
+								</div>
+							</div>`))						
+					})
+				});
+
+				// 展开购物车
+				$('#shopcar a').click(function(){
+					$('.carlist').animate({right: 35},1000);
+				});
+
 			},2000)
 			
 		});
