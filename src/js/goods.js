@@ -30,7 +30,9 @@ require(['config'],function(){
 							<div class="single"><a href=""><img src="../img/single.jpg"></a></div>
 						</div>
 						<div class="goods clearfix">
-							<div class="goodsImg"><img src="${goods.imgS}" data-large="${goods.imgL}"></div>
+							<div class="goodsImg">
+								<img src="${goods.imgS}" data-large="${goods.imgL}" data-guid="${guid}">
+							</div>
 							<div class="goodsInfo">
 								<div class="title">
 									<h1>${goods.name}</h1>
@@ -139,41 +141,121 @@ require(['config'],function(){
 				// 放大镜效果
 				$('.goodsImg').zoom();
 
-				// 飞入效果
-				$('.add span').click(function(){
-					// 运动距离
-					var wide = $('.sidebar').offset().left-$('.goodsImg img').offset().left-78;
-					var target = $(this).parents('.goodsInfo').siblings('.goodsImg').find('img').
-					clone().css({left:0,top:0}).addClass('cloneImg').appendTo('.goodsImg').
-					// 加入列表
-					animate({left: wide,width:78,height:78},1000,function(){
-						$('.cloneImg').remove();
-						$('.carlist ul').append($('<li/>').addClass('clearfix').html(`
-							<div class="goodsimg">
-								<a href=""><img src=""></a></div>
-							<div class="goodsinfo">
-								<p><a href="">丽得姿二代抗皱提拉面膜10片</a></p>
-								<div class="clearfix">
-									<span class="price">￥85.0</span>
-									<p class="amount clearfix">
-										<span class="down"></span>
-										<input type="text" value="1">
-										<span class="up"></span>
-									</p>
-									<a>删除</a>
-								</div>
-							</div>`))						
-					})
+				// 计算数量
+				var idx = 1;
+				$('.count #jia').click(function(){
+					idx++;
+					$('#count').val(idx);
 				});
 
+				$('.count #jian').click(function(){
+					idx--;
+					if(idx === 0) idx = 1;
+					$('#count').val(idx);
+				});
+
+				// 飞入效果
+				$('.add span').click(fly);
+				function fly(){
+					var src = $('.goodsImg').find('img').eq(0).attr('src');
+					var name = $('.goodsInfo h1').html();
+					var price = $('.goodsInfo em').html();
+					var amount = $('.goodsInfo #count').val();
+					var img = $('.goodsImg').find('img');
+
+					// 运动距离
+					var wide = $('.sidebar').offset().left-$('.goodsImg img').offset().left-78;
+					var target = current.clone().css({left:0,top:0}).addClass('cloneImg').appendTo('.goodsImg').
+					// 加入列表
+					animate({left: wide,width:78,height:78},1000,function(){
+						// 商品数量
+						var pro = $('.carlist ul li')
+						var len = pro.length;
+						// 判断重复
+						for(var i=0;i<len;i++){
+							console.log(pro.eq(i).find('input').val())
+							if(current.attr('data-guid') === pro.eq(i).
+							find('img').attr('data-guid')) {
+								oj.qty++;
+								
+							} 
+						}
+
+						// 生成结构
+						$('.cloneImg').remove();
+						$('.carlist ul').append($('<li/>').addClass('clearfix').html(`
+							<div class="carlist_img">
+								<a href=""><img src="${src}" data-guid="${guid}"></a></div>
+							<div class="carlist_info">
+								<p><a href="">${name}</a></p>
+								<div class="clearfix">
+									<span class="price">￥${price}</span>
+									<p class="amount clearfix">
+										<span class="down"></span>
+										<input type="text" value="${amount}">
+										<span class="up"></span>
+									</p>
+									<a id="del">删除</a>
+								</div>
+							</div>`));
+
+						// 计算数量、价钱
+						function count(){
+							var num = 0;
+							var rmb = 0;						
+							for(var i=0;i<len;i++){
+								var val = $('.carlist ul li').eq(i);
+								num += val.find('input').val()*1;
+								rmb += val.find('input').val()*1*val.find('.price').html().slice(1)*1;
+							}
+							$('.carlist .account').html(`
+								<p class="num">共<span>${num}</span>件商品</p>
+								<p class="rmb">共计<span>￥</span><em>${rmb}</em></p>
+								<p class="car"><a href="">去购物车结算</a></p>
+							`);	
+
+							$('.panel .count').html(num);
+						}
+						count();	
+
+						// 存放cookie
+						var arr = [];
+						if(i===len){
+							var obj = {};
+							obj.guid = img.attr('data-guid');
+							obj.src = img.attr('src');
+							obj.name = $('.goodsInfo').find('h1').html();
+							obj.price = $('.goodsInfo').find('em').html();
+							obj.qty = 1;
+							arr.push(obj);
+						}
+
+						//写入cookie
+						var now = new Date();
+						now.setDate(now.getDate() + 3);
+						document.cookie = 'carlist=' + JSON.stringify(arr) + ';expires='+now;
+
+						//删除商品
+						$('.carlist ul').on('click','li #del',function(){
+							$(this).parents('li').remove();
+							count();
+							// 删除cookie
+						});
+					});
+				}
+				
 				// 展开购物车
 				$('#shopcar a').click(function(){
 					$('.carlist').animate({right: 35},1000);
 				});
 
+				// 收起购物车
+				$('.carlist h2 i').click(function(){
+					$('.carlist').animate({right: -300},1000);
+				});	
+
+
 			},2000)
-			
 		});
-		
 	});
 });

@@ -1038,37 +1038,53 @@ footer .sidebar .carlist h2 {
   border-bottom: 1px dotted #ccc;
 }
 
+footer .sidebar .carlist h2 span {
+  float: left;
+  width: 254px;
+  padding-bottom: 17px;
+  border-bottom: 1px #e3e3e3 dotted;
+}
+
+footer .sidebar .carlist h2 i {
+  float: right;
+  font-style: normal;
+  font-size: 24px;
+  color: #adadad;
+  font-family: '宋体';
+  cursor: pointer;
+}
+
 footer .sidebar .carlist li {
   width: 260px;
   border-bottom: 1px #e3e3e3 dotted;
   padding: 20px 0;
 }
 
-footer .sidebar .carlist li .goodsimg {
+footer .sidebar .carlist li .carlist_img {
   float: left;
   width: 78px;
   height: 78px;
   border: 1px #e4e4e4 solid;
 }
 
-footer .sidebar .carlist li .goodsimg img {
+footer .sidebar .carlist li .carlist_img img {
   display: block;
   width: 78px;
   height: 78px;
 }
 
-footer .sidebar .carlist li .goodsinfo {
+footer .sidebar .carlist li .carlist_info {
   float: right;
   width: 170px;
 }
 
-footer .sidebar .carlist li .goodsinfo > p {
+footer .sidebar .carlist li .carlist_info > p {
   margin-top: 8px;
   margin-bottom: 10px;
   height: 36px;
 }
 
-footer .sidebar .carlist li .goodsinfo > div > span {
+footer .sidebar .carlist li .carlist_info > div > span {
   width: 53px;
   font-family: '微软雅黑';
   font-size: 14px;
@@ -1079,14 +1095,14 @@ footer .sidebar .carlist li .goodsinfo > div > span {
   line-height: 24px;
 }
 
-footer .sidebar .carlist li .goodsinfo > div > p {
+footer .sidebar .carlist li .carlist_info > div > p {
   width: 77px;
   height: 24px;
   float: left;
   border: 1px #e4e4e4 solid;
 }
 
-footer .sidebar .carlist li .goodsinfo > div > p input {
+footer .sidebar .carlist li .carlist_info > div > p input {
   font-weight: normal;
   width: 29px;
   height: 24px;
@@ -1098,22 +1114,22 @@ footer .sidebar .carlist li .goodsinfo > div > p input {
   border: 0;
 }
 
-footer .sidebar .carlist li .goodsinfo > div > p span {
+footer .sidebar .carlist li .carlist_info > div > p span {
   width: 24px;
   height: 24px;
   float: left;
   cursor: pointer;
 }
 
-footer .sidebar .carlist li .goodsinfo > div > p .down {
+footer .sidebar .carlist li .carlist_info > div > p .down {
   background: url(../css/img/updown.png) no-repeat 0 -24px;
 }
 
-footer .sidebar .carlist li .goodsinfo > div > p .up {
+footer .sidebar .carlist li .carlist_info > div > p .up {
   background: url(../css/img/updown.png) no-repeat 0 0;
 }
 
-footer .sidebar .carlist li .goodsinfo > div > a {
+footer .sidebar .carlist li .carlist_info > div > a {
   color: #6c6c6c;
   text-decoration: underline;
   float: right;

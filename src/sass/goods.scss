@@ -873,12 +873,26 @@ footer{
 			    overflow: hidden;
 			    height: 42px;
 			    border-bottom: 1px dotted #ccc;
+			    span{
+			    	float: left;
+				    width: 254px;
+				    padding-bottom: 17px;
+				    border-bottom: 1px #e3e3e3 dotted;
+			    }
+			    i{
+			    	float: right;
+				    font-style: normal;
+				    font-size: 24px;
+				    color: #adadad;
+				    font-family: '宋体';
+				    cursor: pointer;
+			    }
 	    	}
 	    	li{
 	    		width: 260px;
 			    border-bottom: 1px #e3e3e3 dotted;
 			    padding: 20px 0;
-			    .goodsimg{
+			    .carlist_img{
 			    	float: left;
 				    width: 78px;
 				    height: 78px;
@@ -889,7 +903,7 @@ footer{
 					    height: 78px;
 				    }
 			    }
-			    .goodsinfo{
+			    .carlist_info{
 			    	float: right;
     				width: 170px;
     				&>p{
