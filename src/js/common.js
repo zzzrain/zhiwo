@@ -1,5 +1,6 @@
 // 	下拉效果、滑动效果
-$(()=>{
+function slider(){	
+	console.log(1)
 	var wechat = $('#wechat');
 	var personal = $('#personal');
 	var server = $('#server');
@@ -62,7 +63,7 @@ $(()=>{
 			break;
 		}
 	});*/
-});
+}
 
 // 验证码函数
 function verify(res){

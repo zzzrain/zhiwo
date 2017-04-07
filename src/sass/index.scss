@@ -684,8 +684,11 @@ main{
 	    .group{
 	    	a{background: url(../css/img/snav.png) no-repeat 0 -120px;padding-top: 40px;}    
 	    }
-	    .newpro{
-	    	a{background: url(../css/img/snav.png) no-repeat 0 -180px;padding-top: 40px;}    
+	    .active{
+	    	background: #00c8ff;
+	    	a{
+	    		color: #fff;
+	    	}
 	    }
     }
 }

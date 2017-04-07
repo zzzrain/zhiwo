@@ -820,9 +820,12 @@ main .side .group a {
   padding-top: 40px;
 }
 
-main .side .newpro a {
-  background: url(../css/img/snav.png) no-repeat 0 -180px;
-  padding-top: 40px;
+main .side .active {
+  background: #00c8ff;
+}
+
+main .side .active a {
+  color: #fff;
 }
 
 footer {

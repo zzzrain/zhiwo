@@ -135,13 +135,60 @@ require(['config'],function(){
 				}).join('');
 				$('main').html(goods);
 			});
+
+			// 数量、价格计算函数
+			function count(){
+				var num = 0;
+				var rmb = 0;	
+				var pro = $('.carlist ul li');
+				for(var i=0;i<pro.length;i++){
+					var val = pro.eq(i);
+					num += val.find('input').val()*1;
+					rmb += val.find('input').val()*1*val.find('.price').html().slice(1)*1;
+				}
+				$('.carlist .account').html(`
+					<p class="num">共<span>${num}</span>件商品</p>
+					<p class="rmb">共计<span>￥</span><em>${rmb}</em></p>
+					<p class="car"><a href="">去购物车结算</a></p>
+				`);	
+				$('.panel .count').html(num);
+			}
 			
+			// 读取cookie
+			var arr = [];
+			var cookie = document.cookie.split('; ');
+			cookie.forEach(function(item){
+				item = item.split('=');
+				if(item[0] === 'carlist'){
+					arr = JSON.parse(item[1]);
+					arr.forEach(function(goods){
+						$('.carlist ul').append($('<li/>').addClass('clearfix').html(`
+							<div class="carlist_img">
+								<a href=""><img src="${goods.src}" data-guid="${goods.guid}"></a>
+							</div>
+							<div class="carlist_info">
+								<p><a href="">${goods.name}</a></p>
+								<div class="clearfix">
+									<span class="price">￥${goods.price}</span>
+									<p class="amount clearfix">
+										<span class="down"></span>
+										<input type="text" value="${goods.amount}">
+										<span class="up"></span>
+									</p>
+									<a id="del">删除</a>
+								</div>
+							</div>`));
+					});
+					count();
+				}
+			});
 			
+			// 延时等待数据获取
 			setTimeout(function(){
 				// 放大镜效果
 				$('.goodsImg').zoom();
 
-				// 计算数量
+				// 购买数量
 				var idx = 1;
 				$('.count #jia').click(function(){
 					idx++;
@@ -156,31 +203,20 @@ require(['config'],function(){
 
 				// 飞入效果
 				$('.add span').click(fly);
-				function fly(){
+				function fly(){	
+					// 原图参数
 					var src = $('.goodsImg').find('img').eq(0).attr('src');
 					var name = $('.goodsInfo h1').html();
 					var price = $('.goodsInfo em').html();
 					var amount = $('.goodsInfo #count').val();
-					var img = $('.goodsImg').find('img');
 
 					// 运动距离
 					var wide = $('.sidebar').offset().left-$('.goodsImg img').offset().left-78;
-					var target = current.clone().css({left:0,top:0}).addClass('cloneImg').appendTo('.goodsImg').
-					// 加入列表
-					animate({left: wide,width:78,height:78},1000,function(){
-						// 商品数量
-						var pro = $('.carlist ul li')
-						var len = pro.length;
-						// 判断重复
-						for(var i=0;i<len;i++){
-							console.log(pro.eq(i).find('input').val())
-							if(current.attr('data-guid') === pro.eq(i).
-							find('img').attr('data-guid')) {
-								oj.qty++;
-								
-							} 
-						}
 
+					// 生成结构
+					var current = $('.goodsImg').find('img');
+					var target = current.clone().css({left:0,top:0}).addClass('cloneImg').appendTo('.goodsImg').
+					animate({left: wide,width:78,height:78},1000,function(){
 						// 生成结构
 						$('.cloneImg').remove();
 						$('.carlist ul').append($('<li/>').addClass('clearfix').html(`
@@ -199,47 +235,32 @@ require(['config'],function(){
 								</div>
 							</div>`));
 
-						// 计算数量、价钱
-						function count(){
-							var num = 0;
-							var rmb = 0;						
-							for(var i=0;i<len;i++){
-								var val = $('.carlist ul li').eq(i);
-								num += val.find('input').val()*1;
-								rmb += val.find('input').val()*1*val.find('.price').html().slice(1)*1;
-							}
-							$('.carlist .account').html(`
-								<p class="num">共<span>${num}</span>件商品</p>
-								<p class="rmb">共计<span>￥</span><em>${rmb}</em></p>
-								<p class="car"><a href="">去购物车结算</a></p>
-							`);	
-
-							$('.panel .count').html(num);
-						}
+						// 计算数量、价格
 						count();	
 
 						// 存放cookie
-						var arr = [];
-						if(i===len){
-							var obj = {};
-							obj.guid = img.attr('data-guid');
-							obj.src = img.attr('src');
-							obj.name = $('.goodsInfo').find('h1').html();
-							obj.price = $('.goodsInfo').find('em').html();
-							obj.qty = 1;
-							arr.push(obj);
-						}
+						var obj = {};
+						obj.guid = current.attr('data-guid');
+						obj.src = current.attr('src');
+						obj.name = $('.goodsInfo').find('h1').html();
+						obj.price = $('.goodsInfo').find('em').html();
+						obj.amount = $('#count').val();
+						arr.push(obj);
 
-						//写入cookie
 						var now = new Date();
 						now.setDate(now.getDate() + 3);
-						document.cookie = 'carlist=' + JSON.stringify(arr) + ';expires='+now;
+						document.cookie = 'carlist=' + JSON.stringify(arr) +';expires='+now +';path='+'/';
 
-						//删除商品
+						// 删除商品/cookie
 						$('.carlist ul').on('click','li #del',function(){
 							$(this).parents('li').remove();
+							for(var i=0;i<arr.length;i++){
+								if(arr[i].guid === $(this).find('img').attr('data-guid')){
+									arr.splice(i,1);
+									break;
+								}
+							}
 							count();
-							// 删除cookie
 						});
 					});
 				}
@@ -252,9 +273,7 @@ require(['config'],function(){
 				// 收起购物车
 				$('.carlist h2 i').click(function(){
 					$('.carlist').animate({right: -300},1000);
-				});	
-
-
+				});
 			},2000)
 		});
 	});
