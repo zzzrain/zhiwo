@@ -1,6 +1,6 @@
 require(['config'],function(){
 	require(['jquery','common'],function(){
-		$(()=>{
+		$(()=>{			
 			// 验证码
 			verify($('#verify'));
 

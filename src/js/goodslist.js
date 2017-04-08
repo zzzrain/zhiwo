@@ -1,17 +1,23 @@
 require(['config'],function(){
 	require(['jquery','common'],function(){
 		$(()=>{	
+			// cookie操作
+			getCookie();
+			$(document).on('click','#h-register',function(){// 退出设置
+				rmCookie();
+			});
+
+			// 默认请求
 			$.post('../php/goodslist.php',{page:idx},callback);
 
 			// 懒加载效果
 			var idx = 1	
 			var page = idx;	
 			var scroll = 1;
-
 			$(window).scroll(e=>{
 				// 临界高度
 				var high = $('main').outerHeight()-$('footer').outerHeight();
-				console.log($(this).scrollTop(),$('main').outerHeight())
+				//console.log($(this).scrollTop(),$('main').outerHeight())
 
 				if($(this).scrollTop() > high){
 					//if(page === idx) {return;}				
@@ -31,7 +37,7 @@ require(['config'],function(){
 					var price = parseInt(goods.original*goods.discount/10);
 					return `<li>
 					    <div class="goodsImg">
-					        <a href="http://localhost/project/html/goods?guid=${goods.guid}"><img src="${goods.imgS}"></a>
+					        <a href="http://localhost/project/html/goods.html?guid=${goods.guid}"><img src="${goods.imgS}"></a>
 					        <div class="effect">
 					        	<a href="">补水</a>
 					            <a href="">补湿</a>

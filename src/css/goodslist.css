@@ -55,7 +55,7 @@ header .top .cont .right .public {
 }
 
 header .top .cont .right .public i {
-  background: url("../css/img/topnav.png") no-repeat 0 -70px;
+  background: url(../css/img/topnav.png) no-repeat 0 -70px;
 }
 
 header .top .cont .right .public:hover {
@@ -77,7 +77,7 @@ header .top .cont .right .wechat img {
 
 header .top .cont .right .phone a {
   padding-left: 14px;
-  background: url("../css/img/topnav.png") no-repeat 0 0;
+  background: url(../css/img/topnav.png) no-repeat 0 0;
 }
 
 header .top .cont .right .personal {
@@ -227,7 +227,7 @@ header .center .cont .shopcar .myshopcar {
   line-height: 36px;
   padding-left: 45px;
   color: #6c6c6c;
-  background: #fff url("../css/img/topnav.png") no-repeat 10px -210px;
+  background: #fff url(../css/img/topnav.png) no-repeat 10px -210px;
   overflow: hidden;
   box-shadow: 0 0 2px #d8d8d8;
   position: absolute;
@@ -246,193 +246,155 @@ header .center .cont .shopcar .shopgoods {
   margin-bottom: 0px;
 }
 
-main .cont {
-  margin: 35px auto;
+header .nav {
+  height: 35px;
+  background: #00c8ff;
 }
 
-main .cont h2 {
-  font-size: 18px;
-  color: black;
-  font-family: 微软雅黑;
-  font-weight: normal;
-  overflow: hidden;
+header .nav .cont {
+  height: 35px;
+  margin: 0 auto;
 }
 
-main .cont h2 span {
-  margin-right: 12px;
-}
-
-main .cont #goodslist {
-  width: 1100px;
-  margin: -8px 0 50px 0;
-}
-
-main .cont #goodslist ul {
-  margin-left: -25px;
-}
-
-main .cont #goodslist ul li {
+header .nav .cont .menu {
   float: left;
-  width: 350px;
-  height: 507px;
-  margin: 25px 0 0 25px;
   position: relative;
 }
 
-main .cont #goodslist ul li .goodsImg {
-  width: 350px;
-  height: 350px;
-  position: relative;
-  background: #fff;
+header .nav .cont .menu li {
+  float: left;
 }
 
-main .cont #goodslist ul li .goodsImg a {
+header .nav .cont .menu li > a {
   display: block;
-  width: 350px;
-  height: 350px;
-}
-
-main .cont #goodslist ul li .goodsImg a img {
-  width: 350px;
-  height: 350px;
-}
-
-main .cont #goodslist ul li .goodsImg .effect {
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 335px;
+  width: 120px;
+  height: 35px;
+  color: #fff;
   text-align: center;
-  padding-left: 15px;
-  display: none;
-}
-
-main .cont #goodslist ul li .goodsImg .effect a {
-  text-align: center;
-  padding: 6px 16px;
-  border: 1px #00c8ff solid;
-  color: #00c8ff;
-  margin-right: 15px;
-  display: inline-block;
-}
-
-main .cont #goodslist ul li .goodsImg .mask {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 300;
-  background: #000;
-  filter: alpha(opacity=40);
-  opacity: 0.4;
-  display: none;
-}
-
-main .cont #goodslist ul li .goodsImg .over {
-  width: 162px;
-  height: 80px;
-  position: absolute;
-  left: 50%;
-  margin-left: -81px;
-  top: 50%;
-  margin-top: -40px;
-  z-index: 400;
-  display: none;
-}
-
-main .cont #goodslist ul li .goodsInfo {
-  width: 310px;
-  height: 146px;
-  padding: 11px 20px 0;
-  background: #fff;
-}
-
-main .cont #goodslist ul li .goodsInfo .name {
-  width: 310px;
-  height: 40px;
+  font-family: '微软雅黑';
+  line-height: 35px;
+  font-size: 14px;
   overflow: hidden;
 }
 
-main .cont #goodslist ul li .goodsInfo .name a {
-  width: 310px;
-  height: 40px;
-  display: block;
-  line-height: 20px;
+header .nav .cont .menu li > a:hover {
+  background: #00647f;
+}
+
+header .nav .cont .menu li:last-child > a:hover .img {
+  display: none;
+}
+
+header .nav .cont .menu .index {
+  background: #00647f;
+}
+
+header .nav .cont .menu .market > a {
+  padding-right: 11px;
+  background: url(../css/img/mainnav.png) no-repeat right 0px;
+}
+
+header .nav .cont .menu .market .list {
+  overflow: hidden;
+  width: 1065px;
+  height: 0px;
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  background: #fff;
+  padding: 0 30px 0 5px;
+  z-index: 200;
+}
+
+header .nav .cont .menu .market .list .product a {
   color: #6c6c6c;
 }
 
-main .cont #goodslist ul li .goodsInfo .name a span {
-  font-size: 16px;
-  color: #ff643c;
+header .nav .cont .menu .market .list .product dl {
+  width: 360px;
+  margin: 40px 0 0 40px;
+  float: left;
+}
+
+header .nav .cont .menu .market .list .product dt {
+  line-height: 23px;
+  padding-left: 21px;
+  width: 336px;
+  height: 23px;
+  padding: 0 0 6px 24px;
+  border-bottom: 1px #c4c4c4 dotted;
+  float: left;
+}
+
+header .nav .cont .menu .market .list .product dt a {
+  font-size: 14px;
   font-weight: bold;
+  background: #fff;
 }
 
-main .cont #goodslist ul li .goodsInfo .price {
-  margin-bottom: 12px;
-}
-
-main .cont #goodslist ul li .goodsInfo .price .num {
+header .nav .cont .menu .market .list .product dd {
   float: left;
-  margin-top: 11px;
+  margin: 12px 20px 0 0px;
 }
 
-main .cont #goodslist ul li .goodsInfo .price .num i {
-  font-style: normal;
-  color: #ff643c;
-  font-size: 14px;
-  font-family: 微软雅黑;
+header .nav .cont .menu .market .list .product .hufu {
+  background: url(../css/img/m_nav.png) no-repeat 0 0;
+  line-height: 23px;
+  padding-left: 21px;
 }
 
-main .cont #goodslist ul li .goodsInfo .price .num span {
-  font-size: 36px;
-  color: #ff643c;
-  font-family: Arial;
+header .nav .cont .menu .market .list .product .yaoz {
+  background: url(../css/img/m_nav.png) no-repeat 0 -30px;
+  line-height: 18px;
 }
 
-main .cont #goodslist ul li .goodsInfo .price .num del {
-  font-size: 14px;
-  font-family: 微软雅黑;
-  color: #c4c4c4;
-  margin-left: 10px;
-  text-decoration: line-through;
+header .nav .cont .menu .market .list .product .xihu {
+  background: url(../css/img/m_nav.png) no-repeat 0 -60px;
+  line-height: 24px;
+  padding-left: 21px;
 }
 
-main .cont #goodslist ul li .goodsInfo .price .buy {
-  width: 90px;
-  height: 26px;
-  background: #ff643c;
+header .nav .cont .menu .market .list .product .caiz {
+  background: url(../css/img/m_nav.png) no-repeat 0 -90px;
+  line-height: 24px;
+}
+
+header .nav .cont .info {
   float: right;
-  margin-top: 19px;
-  line-height: 26px;
-  color: #fff;
-  text-align: center;
 }
 
-main .cont #goodslist ul li .goodsInfo .price .buy a {
-  width: 90px;
-  height: 26px;
-  display: block;
-  text-align: center;
-  line-height: 26px;
-  color: #fff;
-}
-
-main .cont #goodslist ul li .goodsInfo .sale {
-  color: #c4c4c4;
-  height: 40px;
-  line-height: 40px;
-  border-top: 1px #c4c4c4 dotted;
-}
-
-main .cont #goodslist ul li .goodsInfo .sale .time {
+header .nav .cont .info li {
+  overflow: hidden;
+  width: 0px;
   float: left;
-  padding-left: 22px;
-  background: url(../css/img/icon.png) no-repeat 0 -220px;
+  font-family: '微软雅黑';
+  color: #fff;
+  font-size: 14px;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 26px;
+  margin-left: 8px;
+  cursor: pointer;
 }
 
-main .cont #goodslist ul li .goodsInfo .sale .count {
-  float: right;
+header .nav .cont .info .baidu {
+  background: url(../css/img/fournav.png) no-repeat 0 0;
+  width: 0px;
+}
+
+header .nav .cont .info .quality {
+  background: url(../css/img/fournav.png) no-repeat 0 -35px;
+  width: 0px;
+}
+
+header .nav .cont .info .postage {
+  background: url(../css/img/fournav.png) no-repeat 0 -105px;
+  width: 0px;
+}
+
+header .nav .cont .info .return {
+  background: url(../css/img/fournav.png) no-repeat 0 -70px;
+  width: 0px;
 }
 
 footer {
@@ -712,4 +674,193 @@ footer .sidebar .panel .parttwo .top .up_triangle {
 
 footer .sidebar .panel .parttwo .top span {
   color: #fff;
+}
+
+main .cont {
+  margin: 35px auto;
+}
+
+main .cont h2 {
+  font-size: 18px;
+  color: black;
+  font-family: 微软雅黑;
+  font-weight: normal;
+  overflow: hidden;
+}
+
+main .cont h2 span {
+  margin-right: 12px;
+}
+
+main .cont #goodslist {
+  width: 1100px;
+  margin: -8px 0 50px 0;
+}
+
+main .cont #goodslist ul {
+  margin-left: -25px;
+}
+
+main .cont #goodslist ul li {
+  float: left;
+  width: 350px;
+  height: 507px;
+  margin: 25px 0 0 25px;
+  position: relative;
+}
+
+main .cont #goodslist ul li .goodsImg {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  background: #fff;
+}
+
+main .cont #goodslist ul li .goodsImg a {
+  display: block;
+  width: 350px;
+  height: 350px;
+}
+
+main .cont #goodslist ul li .goodsImg a img {
+  width: 350px;
+  height: 350px;
+}
+
+main .cont #goodslist ul li .goodsImg .effect {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 335px;
+  text-align: center;
+  padding-left: 15px;
+  display: none;
+}
+
+main .cont #goodslist ul li .goodsImg .effect a {
+  text-align: center;
+  padding: 6px 16px;
+  border: 1px #00c8ff solid;
+  color: #00c8ff;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+main .cont #goodslist ul li .goodsImg .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  background: #000;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  display: none;
+}
+
+main .cont #goodslist ul li .goodsImg .over {
+  width: 162px;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  margin-left: -81px;
+  top: 50%;
+  margin-top: -40px;
+  z-index: 400;
+  display: none;
+}
+
+main .cont #goodslist ul li .goodsInfo {
+  width: 310px;
+  height: 146px;
+  padding: 11px 20px 0;
+  background: #fff;
+}
+
+main .cont #goodslist ul li .goodsInfo .name {
+  width: 310px;
+  height: 40px;
+  overflow: hidden;
+}
+
+main .cont #goodslist ul li .goodsInfo .name a {
+  width: 310px;
+  height: 40px;
+  display: block;
+  line-height: 20px;
+  color: #6c6c6c;
+}
+
+main .cont #goodslist ul li .goodsInfo .name a span {
+  font-size: 16px;
+  color: #ff643c;
+  font-weight: bold;
+}
+
+main .cont #goodslist ul li .goodsInfo .price {
+  margin-bottom: 12px;
+}
+
+main .cont #goodslist ul li .goodsInfo .price .num {
+  float: left;
+  margin-top: 11px;
+}
+
+main .cont #goodslist ul li .goodsInfo .price .num i {
+  font-style: normal;
+  color: #ff643c;
+  font-size: 14px;
+  font-family: 微软雅黑;
+}
+
+main .cont #goodslist ul li .goodsInfo .price .num span {
+  font-size: 36px;
+  color: #ff643c;
+  font-family: Arial;
+}
+
+main .cont #goodslist ul li .goodsInfo .price .num del {
+  font-size: 14px;
+  font-family: 微软雅黑;
+  color: #c4c4c4;
+  margin-left: 10px;
+  text-decoration: line-through;
+}
+
+main .cont #goodslist ul li .goodsInfo .price .buy {
+  width: 90px;
+  height: 26px;
+  background: #ff643c;
+  float: right;
+  margin-top: 19px;
+  line-height: 26px;
+  color: #fff;
+  text-align: center;
+}
+
+main .cont #goodslist ul li .goodsInfo .price .buy a {
+  width: 90px;
+  height: 26px;
+  display: block;
+  text-align: center;
+  line-height: 26px;
+  color: #fff;
+}
+
+main .cont #goodslist ul li .goodsInfo .sale {
+  color: #c4c4c4;
+  height: 40px;
+  line-height: 40px;
+  border-top: 1px #c4c4c4 dotted;
+}
+
+main .cont #goodslist ul li .goodsInfo .sale .time {
+  float: left;
+  padding-left: 22px;
+  background: url(../css/img/icon.png) no-repeat 0 -220px;
+}
+
+main .cont #goodslist ul li .goodsInfo .sale .count {
+  float: right;
 }

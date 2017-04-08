@@ -1,10 +1,6 @@
 require(['config'],function(){
 	require(['jquery','common'],function(){
 		$(()=>{
-			// 请求结构
-			$('header').load('html/header.html');
-			$('footer').load('html/footer.html');
-
 			// 轮播图
 			play();
 			
@@ -15,10 +11,7 @@ require(['config'],function(){
 			create();
 
 			// 滚动事件
-			scroll();
-			
-			// 延时动画效果
-			setTimeout(slider,2000);
+			scroll();		
 
 			// cookie操作
 			getCookie();
@@ -226,6 +219,7 @@ require(['config'],function(){
 				var hot = $('#hot').outerHeight();
 				var side = $('main .side');
 				var idx = 0;
+
 				$(window).scroll( e=> {	
 					// 获取滚动距离 判断显示隐藏
 					var high =  $(this).scrollTop() - top;			
@@ -240,6 +234,7 @@ require(['config'],function(){
 
 				// 事件委托
 				side.on('click','li',function(){
+					console.log(this)
 					if($(this).hasClass('index')) {
 						$('body').animate({scrollTop:0},'fast');
 					}
@@ -250,7 +245,7 @@ require(['config'],function(){
 					if($(this).hasClass('group')) {
 						$('body').animate({scrollTop:top+hot},'fast');
 					}
-					console.log(this)
+					
 					$(this).addClass('active').siblings().removeClass('active');
 				});
 			}
