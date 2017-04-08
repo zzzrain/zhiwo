@@ -1,6 +1,12 @@
 require(['config'],function(){
 	require(['jquery','common'],function(){
 		$(()=>{
+			// cookie操作
+			getCookie();
+			$(document).on('click','#h-register',function(){// 退出设置
+				rmCookie();
+			});
+
 			// 轮播图
 			play();
 			
@@ -12,13 +18,7 @@ require(['config'],function(){
 
 			// 滚动事件
 			scroll();
-
-			// cookie操作
-			getCookie();
-			$(document).on('click','#h-register',function(){// 退出设置
-				rmCookie();
-			});
-
+			
 			function play(){
 				var play = $('#play');
 				var imgs = $('#play .imgs');

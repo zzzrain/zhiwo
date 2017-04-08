@@ -1,0 +1,170 @@
+@import "header";
+@import "footer";
+
+header{
+	.center{
+		background: #fff;
+    	height: 108px;
+    	margin: 0 auto;
+    	.logo{
+    		float: left;
+    		width: 260px;
+    		height: 108px;
+    	}
+    	.payflow{
+    		float: right;
+    	}
+	}
+}
+
+main{
+	.cont{
+		margin: 0 auto;
+		h2{
+			margin: 16px 0;
+			font-size: 18px;
+		    color: #000;
+		    font-family: '微软雅黑';
+		    font-weight: normal;
+		    .title{
+		    	float: left;
+		    }
+		    .fare{
+		    	float: right;
+			    font-size: 12px;
+			    font-weight: normal;
+			    color: #6c6c6c;
+			    height: 22px;
+			    line-height: 22px;
+			    span{
+			    	margin-right: 12px;
+			    	em{
+			    		color: #ff643c;
+					    font-style: normal;
+					    font-weight: bold;
+			    	}
+			    }
+		    }
+		}
+		.nav{
+			width: 900px;
+			margin-bottom: 10px;
+		    padding: 0 30px;
+		    height: 40px;
+		    background: #6c6c6c;
+		    li{
+		    	width: 60px;
+		    	height: 40px;
+			    line-height: 40px;
+			    float: left;
+			    color: #fff;
+			    text-align: center;
+		    }
+	    	.name{
+		    	width: 596px;
+		    	text-align: left;
+		    }
+		    .amout{
+		    	width: 90px;
+		    }
+		    .allpay{
+		    	width: 80px;
+		    }
+		    .integral{
+		    	width: 70px;
+		    }
+		    .operate{
+		    	width: 64px;
+		    }
+		}
+		table{
+			width: 100%;
+			border-collapse: collapse;
+    		border-spacing: 0;
+    		tr{
+    			border-bottom: 1px #e3e3e3 dotted;
+    			position: relative;
+    			td{
+    				text-align: center;
+    				word-wrap: break-word;
+    				word-break: break-all;
+    			}
+    			.name{
+    				width: 596px;
+   					padding: 20px 0 20px 30px;
+    				position: relative;
+    				
+    			}
+    			.amout{
+    				width: 90px;
+    				.goodsImg{
+					    float: left;
+    					width: 68px;
+					    height: 68px;
+					    border: 1px #eee solid;
+					    margin-left: 15px;
+					    position: relative;
+    				}
+    				.goodsInfo{
+					    float: left;
+					    width: 350px;
+					    margin-left: 20px;
+    				}
+    			}
+			    .allpay{
+			    	width: 80px;
+			    	color: #ff643c;
+			    }
+			    .integral{
+			    	width: 70px;
+			    }
+			    .operate{
+			    	width: 64px;
+			    }
+    		}
+		}
+		.clear{
+			padding: 0 30px;
+    		height: 110px;
+			p{
+				margin: 45px 10px 0 10px;
+				float: left;
+			}
+    		.left{
+    			float: left;
+    			.shop{
+    				width: 73px;
+				    height: 26px;
+				    background: #00c8ff;
+				    color: #fff;
+				    text-align: center;
+				    line-height: 26px;
+				    display: block;
+    			}
+    		}
+    		.right{
+    			float: right;
+    		}
+    		.btn{
+    			width: 124px;
+			    height: 45px;
+			    background: #ff643c;
+			    line-height: 45px;
+			    text-align: center;
+			    font-family: '微软雅黑';
+			    font-size: 24px;
+			    color: #fff;
+			    display: block;
+    		}
+    		em{
+    			font-size: 30px;
+    			color: #ff643c;
+    		}
+    		i{
+    			font-style: normal;
+    			font-size: 30px;
+    			color: #ff643c;
+    		}
+		}
+	}
+}

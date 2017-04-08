@@ -23,11 +23,7 @@ require(['config'],function(){
 								<p><a href="">${goods.name}</a></p>
 								<div class="clearfix">
 									<span class="price">￥${goods.price}</span>
-									<p class="amount clearfix">
-										<span class="down"></span>
-										<input type="text" value="${goods.amount}">
-										<span class="up"></span>
-									</p>
+									<span class="amount">×${goods.amount}</span>									
 									<a id="del">删除</a>
 								</div>
 							</div>`));
@@ -215,11 +211,7 @@ require(['config'],function(){
 								<p><a href="">${name}</a></p>
 								<div class="clearfix">
 									<span class="price">￥${price}</span>
-									<p class="amount clearfix">
-										<span class="down"></span>
-										<input type="text" value="${amount}">
-										<span class="up"></span>
-									</p>
+									<span class="amount">×${amount}</span>
 									<a id="del">删除</a>
 								</div>
 							</div>`));
@@ -268,14 +260,14 @@ require(['config'],function(){
 				var rmb = 0;	
 				var pro = $('.carlist ul li');
 				for(var i=0;i<pro.length;i++){
-					var val = pro.eq(i);
-					num += val.find('input').val()*1;
-					rmb += val.find('input').val()*1*val.find('.price').html().slice(1)*1;
+					var val = pro.eq(i).find('.amount').html().slice(1);
+					num += val*1;
+					rmb += val*1*pro.eq(i).find('.price').html().slice(1)*1;
 				}
 				$('.carlist .account').html(`
 					<p class="num">共<span>${num}</span>件商品</p>
 					<p class="rmb">共计<span>￥</span><em>${rmb}</em></p>
-					<p class="car"><a href="">去购物车结算</a></p>
+					<p class="car"><a href="carlist.html">去购物车结算</a></p>
 				`);	
 				$('.panel .count').html(num);
 			}

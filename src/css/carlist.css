@@ -55,7 +55,7 @@ header .top .cont .right .public {
 }
 
 header .top .cont .right .public i {
-  background: url("../css/img/topnav.png") no-repeat 0 -70px;
+  background: url(../css/img/topnav.png) no-repeat 0 -70px;
 }
 
 header .top .cont .right .public:hover {
@@ -77,7 +77,7 @@ header .top .cont .right .wechat img {
 
 header .top .cont .right .phone a {
   padding-left: 14px;
-  background: url("../css/img/topnav.png") no-repeat 0 0;
+  background: url(../css/img/topnav.png) no-repeat 0 0;
 }
 
 header .top .cont .right .personal {
@@ -227,7 +227,7 @@ header .center .cont .shopcar .myshopcar {
   line-height: 36px;
   padding-left: 45px;
   color: #6c6c6c;
-  background: #fff url("../css/img/topnav.png") no-repeat 10px -210px;
+  background: #fff url(../css/img/topnav.png) no-repeat 10px -210px;
   overflow: hidden;
   box-shadow: 0 0 2px #d8d8d8;
   position: absolute;
@@ -291,7 +291,7 @@ header .nav .cont .menu .index {
 
 header .nav .cont .menu .market > a {
   padding-right: 11px;
-  background: url("../css/img/mainnav.png") no-repeat right 0px;
+  background: url(../css/img/mainnav.png) no-repeat right 0px;
 }
 
 header .nav .cont .menu .market .list {
@@ -378,365 +378,23 @@ header .nav .cont .info li {
 }
 
 header .nav .cont .info .baidu {
-  background: url("../css/img/fournav.png") no-repeat 0 0;
+  background: url(../css/img/fournav.png) no-repeat 0 0;
   width: 0px;
 }
 
 header .nav .cont .info .quality {
-  background: url("../css/img/fournav.png") no-repeat 0 -35px;
+  background: url(../css/img/fournav.png) no-repeat 0 -35px;
   width: 0px;
 }
 
 header .nav .cont .info .postage {
-  background: url("../css/img/fournav.png") no-repeat 0 -105px;
+  background: url(../css/img/fournav.png) no-repeat 0 -105px;
   width: 0px;
 }
 
 header .nav .cont .info .return {
-  background: url("../css/img/fournav.png") no-repeat 0 -70px;
+  background: url(../css/img/fournav.png) no-repeat 0 -70px;
   width: 0px;
-}
-
-main .cont {
-  margin: 35px auto;
-}
-
-main .cont > .title {
-  height: 40px;
-  background: #fff;
-}
-
-main .cont > .title > p {
-  padding: 0 6px;
-  height: 22px;
-  line-height: 22px;
-  font-weight: bold;
-  margin-top: 9px;
-  float: left;
-}
-
-main .cont > .title > p a {
-  color: #6c6c6c;
-}
-
-main .cont > .title > i {
-  font-style: normal;
-  color: #6c6c6c;
-  font-weight: bold;
-  margin: 14px 15px 0;
-  float: left;
-}
-
-main .cont > .title .self {
-  color: #ff643c;
-}
-
-main .cont .today {
-  min-height: 150px;
-  background: #fff;
-  position: relative;
-}
-
-main .cont .today .text {
-  width: 570px;
-  font-size: 16px;
-  line-height: 26px;
-  padding: 25px 0 25px 40px;
-}
-
-main .cont .today .text span {
-  color: #ff643c;
-}
-
-main .cont .today .single {
-  width: 310px;
-  height: 150px;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  margin-top: -75px;
-}
-
-main .cont .today .single a {
-  display: block;
-  width: 310px;
-  height: 150px;
-}
-
-main .cont .today .single a img {
-  display: block;
-  width: 235px;
-  height: 150px;
-  margin: 0 auto;
-}
-
-main .cont .goods {
-  width: 880px;
-  background: #fff;
-  margin: 30px 0;
-  padding: 40px;
-}
-
-main .cont .goods .goodsImg {
-  float: left;
-  width: 350px;
-  height: 350px;
-}
-
-main .cont .goods .goodsImg img {
-  display: block;
-  width: 350px;
-  height: 350px;
-}
-
-main .cont .goods .goodsImg .cloneImg {
-  position: absolute;
-}
-
-main .cont .goods .goodsInfo {
-  width: 490px;
-  float: right;
-  position: relative;
-}
-
-main .cont .goods .goodsInfo .title > h1 {
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 26px;
-  height: 52px;
-  overflow: hidden;
-  margin-bottom: 7px;
-}
-
-main .cont .goods .goodsInfo .title .dis {
-  float: left;
-}
-
-main .cont .goods .goodsInfo .title .dis i {
-  font-style: normal;
-  font-size: 20px;
-  font-family: 微软雅黑;
-  color: #ff643c;
-}
-
-main .cont .goods .goodsInfo .title .dis em {
-  font-style: normal;
-  font-size: 36px;
-  color: #ff643c;
-}
-
-main .cont .goods .goodsInfo .title .face {
-  float: left;
-  color: #c4c4c4;
-  margin-top: 19px;
-}
-
-main .cont .goods .goodsInfo .title .face span {
-  margin-left: 10px;
-}
-
-main .cont .goods .goodsInfo .title .face del {
-  font-family: 微软雅黑;
-  margin-left: -4px;
-}
-
-main .cont .goods .goodsInfo .assess {
-  border-top: 1px #c4c4c4 solid;
-  border-bottom: 1px #c4c4c4 solid;
-  height: 44px;
-  margin-top: 12px;
-}
-
-main .cont .goods .goodsInfo .assess p {
-  margin-top: 15px;
-  float: left;
-}
-
-main .cont .goods .goodsInfo .count {
-  margin-top: 30px;
-}
-
-main .cont .goods .goodsInfo .count > span {
-  float: left;
-  width: 53px;
-  height: 24px;
-  line-height: 24px;
-  margin-right: 6px;
-  font-family: 宋体;
-  font-size: 12px;
-  color: #6c6c6c;
-}
-
-main .cont .goods .goodsInfo .count .amount {
-  width: 77px;
-  height: 24px;
-  float: left;
-  border: 1px #e4e4e4 solid;
-  overflow: hidden;
-}
-
-main .cont .goods .goodsInfo .count .amount input {
-  font-weight: normal;
-  width: 29px;
-  height: 24px;
-  line-height: 24px;
-  text-align: center;
-  float: left;
-  font-size: 14px;
-  border: 0;
-}
-
-main .cont .goods .goodsInfo .count .amount span {
-  width: 24px;
-  height: 24px;
-  float: left;
-  cursor: pointer;
-}
-
-main .cont .goods .goodsInfo .count .amount #jia {
-  background: url(../css/img/updown.png) no-repeat 0 0;
-}
-
-main .cont .goods .goodsInfo .count .amount #jian {
-  background: url(../css/img/updown.png) no-repeat 0 -24px;
-}
-
-main .cont .goods .goodsInfo .buyer {
-  margin-top: 30px;
-}
-
-main .cont .goods .goodsInfo .buyer .buy {
-  margin-bottom: 15px;
-}
-
-main .cont .goods .goodsInfo .buyer .buy .add {
-  width: 200px;
-  height: 45px;
-  float: left;
-  margin-right: 35px;
-}
-
-main .cont .goods .goodsInfo .buyer .buy .add span {
-  display: block;
-  width: 137px;
-  height: 45px;
-  line-height: 45px;
-  color: white;
-  font-family: 微软雅黑;
-  font-size: 24px;
-  padding-left: 63px;
-  background: url(../css/img/xingji.png) 0px -78px no-repeat #ff643c;
-}
-
-main .cont .goods .goodsInfo .buyer .buy .cang {
-  float: left;
-  color: #c4c4c4;
-  cursor: pointer;
-  padding-left: 23px;
-  margin-top: 17px;
-  background: url(../css/img/xingji.png) no-repeat 0 -60px;
-}
-
-main .cont .goods .goodsInfo .effect > span {
-  float: left;
-  width: 40px;
-  height: 20px;
-  line-height: 20px;
-  background: #00c8ff;
-  color: #fff;
-  text-align: center;
-  margin-right: 9px;
-}
-
-main .cont .goods .goodsInfo .effect ul li {
-  float: left;
-  height: 20px;
-  line-height: 20px;
-  margin-right: 10px;
-}
-
-main .cont .intro {
-  margin-bottom: 30px;
-  width: 700px;
-  float: right;
-}
-
-main .cont .intro h3 {
-  width: 700px;
-  height: 40px;
-  background: #6c6c6c;
-  color: #fff;
-  position: relative;
-}
-
-main .cont .intro h3 ul {
-  padding-left: 37px;
-}
-
-main .cont .intro h3 ul li {
-  float: left;
-  margin-right: 45px;
-}
-
-main .cont .intro h3 ul li a {
-  display: block;
-  font-size: 14px;
-  color: #fff;
-  height: 40px;
-  line-height: 40px;
-}
-
-main .cont .intro .detail {
-  background: #fff;
-  padding: 16px 20px 20px;
-}
-
-main .cont .intro .detail h2 {
-  font-size: 18px;
-  color: black;
-  font-family: 微软雅黑;
-  font-weight: normal;
-  padding-bottom: 5px;
-  overflow: hidden;
-  border-bottom: 1px solid #c4c4c4;
-}
-
-main .cont .intro .detail table {
-  padding: 24px 0;
-  position: relative;
-  min-height: 239px;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-main .cont .intro .detail table tbody {
-  display: table-row-group;
-  vertical-align: middle;
-  border-color: inherit;
-}
-
-main .cont .intro .detail table tbody tr {
-  display: table-row;
-  vertical-align: inherit;
-  border-color: inherit;
-}
-
-main .cont .intro .detail table tbody tr td {
-  word-wrap: break-word;
-  word-break: break-all;
-  line-height: 25px;
-}
-
-main .cont .intro .detail table tbody tr .title {
-  font-weight: bold;
-  width: 60px;
-  vertical-align: top;
-}
-
-main .cont .intro .detail table tbody tr .cont {
-  width: 300px;
-  vertical-align: top;
-  padding-left: 32px;
 }
 
 footer {
@@ -873,7 +531,7 @@ footer .copyright a {
 footer .sidebar {
   width: 35px;
   position: fixed;
-  top: 0px;
+  top: 0;
   right: 0px;
   z-index: 1000;
   min-height: 100%;
@@ -1018,151 +676,197 @@ footer .sidebar .panel .parttwo .top span {
   color: #fff;
 }
 
-footer .sidebar .carlist {
-  width: 280px;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  right: -300px;
+header .center {
   background: #fff;
-  padding: 10px;
+  height: 108px;
+  margin: 0 auto;
 }
 
-footer .sidebar .carlist h2 {
-  font-weight: normal;
+header .center .logo {
+  float: left;
+  width: 260px;
+  height: 108px;
+}
+
+header .center .payflow {
+  float: right;
+}
+
+main .cont {
+  margin: 0 auto;
+}
+
+main .cont h2 {
+  margin: 16px 0;
   font-size: 18px;
   color: #000;
   font-family: '微软雅黑';
-  overflow: hidden;
-  height: 42px;
-  border-bottom: 1px dotted #ccc;
+  font-weight: normal;
 }
 
-footer .sidebar .carlist h2 span {
+main .cont h2 .title {
   float: left;
-  width: 254px;
-  padding-bottom: 17px;
-  border-bottom: 1px #e3e3e3 dotted;
 }
 
-footer .sidebar .carlist h2 i {
+main .cont h2 .fare {
   float: right;
+  font-size: 12px;
+  font-weight: normal;
+  color: #6c6c6c;
+  height: 22px;
+  line-height: 22px;
+}
+
+main .cont h2 .fare span {
+  margin-right: 12px;
+}
+
+main .cont h2 .fare span em {
+  color: #ff643c;
   font-style: normal;
-  font-size: 24px;
-  color: #adadad;
-  font-family: '宋体';
-  cursor: pointer;
-}
-
-footer .sidebar .carlist li {
-  width: 260px;
-  border-bottom: 1px #e3e3e3 dotted;
-  padding: 20px 0;
-}
-
-footer .sidebar .carlist li .carlist_img {
-  float: left;
-  width: 78px;
-  height: 78px;
-  border: 1px #e4e4e4 solid;
-}
-
-footer .sidebar .carlist li .carlist_img img {
-  display: block;
-  width: 78px;
-  height: 78px;
-}
-
-footer .sidebar .carlist li .carlist_info {
-  float: right;
-  width: 170px;
-}
-
-footer .sidebar .carlist li .carlist_info > p {
-  margin-top: 8px;
-  margin-bottom: 10px;
-  height: 36px;
-}
-
-footer .sidebar .carlist li .carlist_info > div > span {
-  width: 53px;
-  font-family: '微软雅黑';
-  font-size: 14px;
-  color: #ff643c;
-  float: left;
-  margin-right: 6px;
-  height: 24px;
-  line-height: 24px;
-}
-
-footer .sidebar .carlist li .carlist_info > div > p {
-  width: 77px;
-  height: 24px;
-  float: left;
-  border: 1px #e4e4e4 solid;
-}
-
-footer .sidebar .carlist li .carlist_info > div > p .price {
-  width: 24px;
-  height: 24px;
-  float: left;
-  cursor: pointer;
-}
-
-footer .sidebar .carlist li .carlist_info > div > p .amount {
-  color: #ff643c;
-  font-size: 18px;
   font-weight: bold;
 }
 
-footer .sidebar .carlist li .carlist_info > div > a {
-  color: #6c6c6c;
-  text-decoration: underline;
-  float: right;
-  margin-top: 10px;
-  font-size: 12px;
+main .cont .nav {
+  width: 900px;
+  margin-bottom: 10px;
+  padding: 0 30px;
+  height: 40px;
+  background: #6c6c6c;
 }
 
-footer .sidebar .carlist .account {
-  padding: 10px 0;
+main .cont .nav li {
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  color: #fff;
+  text-align: center;
+}
+
+main .cont .nav .name {
+  width: 596px;
+  text-align: left;
+}
+
+main .cont .nav .amout {
+  width: 90px;
+}
+
+main .cont .nav .allpay {
+  width: 80px;
+}
+
+main .cont .nav .integral {
+  width: 70px;
+}
+
+main .cont .nav .operate {
+  width: 64px;
+}
+
+main .cont table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+main .cont table tr {
+  border-bottom: 1px #e3e3e3 dotted;
   position: relative;
 }
 
-footer .sidebar .carlist .account .num span {
-  color: #ff643c;
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0 2px;
+main .cont table tr td {
+  text-align: center;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
-footer .sidebar .carlist .account .rmb span {
-  color: #ff643c;
-  font-size: 14px;
-  font-family: '微软雅黑';
-  margin: 0 3px 0 4px;
+main .cont table tr .name {
+  width: 596px;
+  padding: 20px 0 20px 30px;
+  position: relative;
 }
 
-footer .sidebar .carlist .account .rmb em {
-  color: #ff643c;
-  font-size: 24px;
-  font-weight: bold;
-  font-style: normal;
-}
-
-footer .sidebar .carlist .account .car {
+main .cont table tr .amout {
   width: 90px;
-  height: 26px;
-  background: #ff643c;
-  position: absolute;
-  top: 19px;
-  right: 0;
 }
 
-footer .sidebar .carlist .account .car a {
-  display: block;
-  width: 90px;
+main .cont table tr .amout .goodsImg {
+  float: left;
+  width: 68px;
+  height: 68px;
+  border: 1px #eee solid;
+  margin-left: 15px;
+  position: relative;
+}
+
+main .cont table tr .amout .goodsInfo {
+  float: left;
+  width: 350px;
+  margin-left: 20px;
+}
+
+main .cont table tr .allpay {
+  width: 80px;
+  color: #ff643c;
+}
+
+main .cont table tr .integral {
+  width: 70px;
+}
+
+main .cont table tr .operate {
+  width: 64px;
+}
+
+main .cont .clear {
+  padding: 0 30px;
+  height: 110px;
+}
+
+main .cont .clear p {
+  margin: 45px 10px 0 10px;
+  float: left;
+}
+
+main .cont .clear .left {
+  float: left;
+}
+
+main .cont .clear .left .shop {
+  width: 73px;
   height: 26px;
+  background: #00c8ff;
   color: #fff;
   text-align: center;
   line-height: 26px;
+  display: block;
+}
+
+main .cont .clear .right {
+  float: right;
+}
+
+main .cont .clear .btn {
+  width: 124px;
+  height: 45px;
+  background: #ff643c;
+  line-height: 45px;
+  text-align: center;
+  font-family: '微软雅黑';
+  font-size: 24px;
+  color: #fff;
+  display: block;
+}
+
+main .cont .clear em {
+  font-size: 30px;
+  color: #ff643c;
+}
+
+main .cont .clear i {
+  font-style: normal;
+  font-size: 30px;
+  color: #ff643c;
 }

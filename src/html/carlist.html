@@ -10,33 +10,193 @@
 <body>
 	<div class="wrap">
 		<header>
+			<div class="top">
+				<div class="cont w1100">
+					<div class="left" id="login_status">
+						<ul class="clearfix">
+							<li>欢迎来到知我！这里，用专业呵护美丽。</li>
+							<li id="h-login">
+								<a href="login.html">请登录</a>
+							</li>
+							<li id="h-register">
+								<a href="register.html">快速注册</a>
+							</li>
+						</ul>
+					</div>
+					<div class="right">
+						<ul class="clearfix">
+							<li class="public clearfix" id="wechat">
+								<a href=""><span>微信商城</span><i></i></a>
+								<div class="wechat"><img src="../img/wechat.jpg"></div>
+							</li>
+							<li class="phone">
+								<a href="">手机知我</a>
+							</li>
+							<li class="public" id="personal">
+								<a href=""><span>我的小窝</span><i></i></a>
+								<div class="personal">
+									<ul>
+										<li><a href="">我的订单</a></li>
+										<li><a href="">我的优惠券</a></li>
+										<li><a href="">我的收藏</a></li>
+										<li><a href="">我的预订</a></li>
+										<li><a href="">我的积分</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="line">|</li>
+							<li class="public" id="server">
+								<a href="">
+									<span>客户服务</span><i></i>
+								</a>
+								<div class="server">
+									<ul>
+										<li><a href="">帮助中心</a></li>
+										<li><a href="">新浪微博</a></li>
+										<li><a href="">正品承诺</a></li>
+										<li><a href="">真伪查询</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="center clearfix w960">
+				<div class="logo"><a href="../index.html"><img src="../img/logo.jpg"></a></div>
+				<div class="payflow"><img src="../img/payflow.jpg" alt=""></div>
+			</div>
 		</header>
 
 		<main>
 			<div class="cont w960">
-				<div class="carlist">
-					<h2>
-						<p class="title"><span>我的购物车</span><i>My Cart</i></p>
-						<p class="fare"><span>运费每单<em>8</em>元</span><span>满<em>139</em>元包邮</span></p>
-					</h2>
-					<div class="mycar">
-						<div class="nav">
-							<ul class="clearfix">
-								<li class="table_nav_name">选购的商品</li>
-								<li class="table_nav_price">单价</li>
-								<li class="table_nav_amount">数量</li>
-								<li class="table_nav_allpay">金额小计</li>
-								<li class="table_nav_integral">赠送积分</li>
-								<li class="table_nav_operate">操作</li>
-							</ul>
-						</div>
-						<div class="products"></div>
+				<h2 class="clearfix">
+					<p class="title"><span>我的购物车</span><i>My Cart</i></p>
+					<p class="fare"><span>运费每单<em>8</em>元</span><span>满<em>139</em>元包邮</span></p>
+				</h2>
+				<div class="nav">
+					<ul class="clearfix">
+						<li class="name">选购的商品</li>
+						<li class="amount">数量</li>
+						<li class="allpay">单价</li>
+						<li class="integral">赠送积分</li>
+						<li class="operate">操作</li>
+					</ul>
+				</div>
+				<table class="clearfix">
+					<tbody>
+						<tr>
+							<td class="name clearfix">
+								<p class="goodsImg">
+									<a><img src=""><span></span></a>
+								</p>
+								<div class="goodsInfo">
+								</div>
+							</td>
+							<td class="price"><p>￥<span">59</span></p></td>
+							<td class="amount">
+								
+							</td>
+							<td class="jifen"><p>59</p></td>
+							<td class="operate">
+								<p>
+									<a id="del">删除</a>
+									<a id="like">收藏</a>
+								</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="clear">
+					<div class="left clearfix">
+						<p class="all"><a href="">全部清空</a></p>
+						<p class="shop"><a href="goodslist.html">继续购物</a></p>
+					</div>
+					<div class="right clearfix">
+						<p class="num">共<i>2</i>件商品</p>
+						<p class="rmb">
+							<span>应付金额（不含运费）：</span>
+							<i>￥</i><em>128.00</em>
+						</p>
+						<p class="btn"><a href="">去结算</a></p>
 					</div>
 				</div>
 			</div>
 		</main>
 
 		<footer>
+			<div class="intro w1100 clearfix">
+				<dl>
+					<dt>真品保证</dt>
+					<dd><a href=""=>品牌合作</a></dd>
+					<dd><a href=""=>严格把关</a></dd>
+					<dd><a href=""=>百度投资</a></dd>
+					<dd><a href=""=>全球品牌直供</a></dd>
+				</dl>
+				<dl>
+					<dt>30天包退</dt>
+					<dd><a href=""=>退换货政策</a></dd>
+					<dd><a href=""=>办理退换货</a></dd>
+					<dd><a href=""=>售后服务</a></dd>
+				</dl>
+				<dl>
+					<dt>139元包邮</dt>
+					<dd><a href=""=>配送政策</a></dd>
+					<dd><a href=""=>快递查询</a></dd>
+				</dl>
+				<dl>
+					<dt>药妆专柜</dt>
+					<dd><a href="">肤质判定</a></dd>
+					<dd><a href="">肌肤问题</a></dd>
+					<dd><a href="">达人推荐</a></dd>
+					<dd><a href="">护肤常识</a></dd>
+				</dl>
+				<dl class="public">
+					<dt>关于知我</dt>
+					<dd><a href=""=>知我介绍</a></dd>
+					<dd><a href=""=>商务合作</a></dd>
+					<dd><a href="">友情链接</a></dd>
+					<dd><a href=""=>开放API</a></dd>
+				</dl>
+				<dl class="public">
+					<dt>新手指南</dt>
+					<dd><a href=""=>购物流程</a></dd>
+					<dd><a href=""=>支付方式</a></dd>
+					<dd><a href="">化妆品品牌大全</a></dd>
+				</dl>
+				<dl class="public">
+					<dt>联系方式</dt>
+					<dd><a id="service">在线客服咨询</a></dd>
+					<dd class="method">热线</dd>
+					<dd class="phone">400-630-1018<br>010-65389618</dd>
+				</dl>
+				<dl class="public wechat">
+					<dt>知我微信商城</dt>
+					<dd><img src="../img/wechat.jpg" alt="知我微信商城二维码"></dd>
+				</dl>
+			</div>
+			<div class="center">
+				<div class="box">
+					<ul>
+						<li class="baidu"><span>百度投资</span></li>
+						<li class="quality"><span>真品保证</span></li>
+						<li class="return"><span>30天包退</span></li>
+						<li class="postage"><span>139元包邮</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="copyright">
+				<p class="text1">© 2015-2019 知我天成科技（北京）股份有限公司 zhiwo.com 保留一切权利。客服热线：400-630-1018</p>
+				<p class="text2">
+					<a href=""=>京ICP备10047008号</a> |
+					<a href=""=>京ICP证110762号</a> | 网公安备1101054365号 | 营业执照 
+				</p>
+				<p>
+					<img src="../img/footer_copy_02.jpg" alt="支付宝特约商家">
+					<img src="../img/footer_copy_03.jpg" alt="快捷支付">
+					<img src="../img/footer_copy_05.jpg" alt="网上交易保障中心">
+				</p>
+			</div>
 		</footer>
 	</div>
 </body>

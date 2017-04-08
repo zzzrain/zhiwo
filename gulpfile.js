@@ -24,13 +24,12 @@ gulp.task('watch',function(){
 // 自动刷新
 gulp.task('server',function(){
 	browserSync({
-		// server:{baseDir: "src"},
-		// port:4000,
+		server:{baseDir: "src"},
+		port:4000,
 
 		// 代理
-		proxy:'http://localhost/project/src/',
+		// proxy:'http://localhost/project/src/',
 		file:['src/*html']
 	});
-
 	gulp.watch('src/sass/*.scss',['create']);
 });

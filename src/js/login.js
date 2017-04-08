@@ -1,10 +1,9 @@
 require(['config'],function(){
 	require(['jquery','common'],function(){
 		$(()=>{
+			getCookie();
 			// 验证码
 			verify($('#verify'));
-			
-			getCookie();
 
 			$(document).on('click','#change',function(){
 				verify($('#verify'));

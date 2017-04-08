@@ -37,7 +37,7 @@ require(['config'],function(){
 					var price = parseInt(goods.original*goods.discount/10);
 					return `<li>
 					    <div class="goodsImg">
-					        <a href="http://localhost/project/html/goods.html?guid=${goods.guid}"><img src="${goods.imgS}"></a>
+					        <a href="goods.html?guid=${goods.guid}"><img src="${goods.imgS}"></a>
 					        <div class="effect">
 					        	<a href="">补水</a>
 					            <a href="">补湿</a>

@@ -97,7 +97,6 @@ function setCookie(src){
 // 获取cookie（仅用于注册登录）
 function getCookie(){
 	var cookie = document.cookie.split('; ');
-	console.log(cookie)
 	cookie.forEach(function(item){
 		item = item.split('=');
 		if(item[0] === 'phone'){
