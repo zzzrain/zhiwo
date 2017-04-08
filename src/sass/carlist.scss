@@ -19,7 +19,7 @@ header{
 
 main{
 	.cont{
-		margin: 0 auto;
+		margin: 30px auto;
 		h2{
 			margin: 16px 0;
 			font-size: 18px;
@@ -48,12 +48,11 @@ main{
 		}
 		.nav{
 			width: 900px;
-			margin-bottom: 10px;
 		    padding: 0 30px;
 		    height: 40px;
 		    background: #6c6c6c;
 		    li{
-		    	width: 60px;
+		    	width: 100px;
 		    	height: 40px;
 			    line-height: 40px;
 			    float: left;
@@ -61,42 +60,30 @@ main{
 			    text-align: center;
 		    }
 	    	.name{
-		    	width: 596px;
+		    	width: 500px;
 		    	text-align: left;
-		    }
-		    .amout{
-		    	width: 90px;
-		    }
-		    .allpay{
-		    	width: 80px;
-		    }
-		    .integral{
-		    	width: 70px;
-		    }
-		    .operate{
-		    	width: 64px;
 		    }
 		}
 		table{
 			width: 100%;
+			background: #fff;
 			border-collapse: collapse;
     		border-spacing: 0;
     		tr{
     			border-bottom: 1px #e3e3e3 dotted;
     			position: relative;
     			td{
+    				width: 90px;
+    				margin: 0px;
+    				padding: 0px;
     				text-align: center;
     				word-wrap: break-word;
     				word-break: break-all;
     			}
     			.name{
-    				width: 596px;
+    				width: 360px;
    					padding: 20px 0 20px 30px;
     				position: relative;
-    				
-    			}
-    			.amout{
-    				width: 90px;
     				.goodsImg{
 					    float: left;
     					width: 68px;
@@ -104,6 +91,10 @@ main{
 					    border: 1px #eee solid;
 					    margin-left: 15px;
 					    position: relative;
+					    img{
+					    	width: 68px;
+					    	height: 68px;
+					    }
     				}
     				.goodsInfo{
 					    float: left;
@@ -111,35 +102,76 @@ main{
 					    margin-left: 20px;
     				}
     			}
-			    .allpay{
-			    	width: 80px;
+    			.price{
+			    	font-size: 16px;
 			    	color: #ff643c;
 			    }
+    			.amount{
+    				p{
+					    height: 24px;
+					    float: left;
+					    border: 1px #e4e4e4 solid;
+    				}
+    				input{
+					    font-weight: normal;
+					    width: 40px;
+					    height: 24px;
+					    line-height: 24px;
+					    text-align: center;
+					    float: left;
+					    font-size: 14px;
+					    border: 0;
+    				}  
+    				span{
+    					width: 24px;
+					    height: 24px;
+					    float: left;
+					    cursor: pointer;
+    				}
+    				.jia{
+    					background: url(../css/img/updown.png) no-repeat 0 0px
+    				}
+    				.jian{
+    					background: url(../css/img/updown.png) no-repeat 0 -24px
+    				}				
+    			}
 			    .integral{
-			    	width: 70px;
+			    	width: 80px;
+			    	font-size: 16px;
 			    }
 			    .operate{
-			    	width: 64px;
+			    	width: 80px;
+			    	font-size: 16px;
 			    }
     		}
 		}
 		.clear{
 			padding: 0 30px;
     		height: 110px;
+    		background: #fff;
 			p{
 				margin: 45px 10px 0 10px;
 				float: left;
 			}
+			a{
+				color: #fff;
+			}
     		.left{
     			float: left;
+    			p{
+					display: block;
+					width: 73px;
+    				line-height: 26px;
+    				text-align: center;
+    			}
+    			.all{
+    				a{
+    					color: #000;
+    				}
+    			}
     			.shop{
-    				width: 73px;
-				    height: 26px;
 				    background: #00c8ff;
 				    color: #fff;
-				    text-align: center;
-				    line-height: 26px;
-				    display: block;
     			}
     		}
     		.right{
@@ -157,6 +189,7 @@ main{
 			    display: block;
     		}
     		em{
+    			font-style: normal;
     			font-size: 30px;
     			color: #ff643c;
     		}

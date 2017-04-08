@@ -716,13 +716,13 @@ main .cont #goodslist ul li .goodsImg {
   background: #fff;
 }
 
-main .cont #goodslist ul li .goodsImg a {
+main .cont #goodslist ul li .goodsImg > a {
   display: block;
   width: 350px;
   height: 350px;
 }
 
-main .cont #goodslist ul li .goodsImg a img {
+main .cont #goodslist ul li .goodsImg > a img {
   width: 350px;
   height: 350px;
 }
@@ -754,7 +754,6 @@ main .cont #goodslist ul li .goodsImg .mask {
   left: 0;
   z-index: 300;
   background: #000;
-  filter: alpha(opacity=40);
   opacity: 0.4;
   display: none;
 }
@@ -769,6 +768,14 @@ main .cont #goodslist ul li .goodsImg .over {
   margin-top: -40px;
   z-index: 400;
   display: none;
+}
+
+main .cont #goodslist ul li .goodsImg:hover img {
+  opacity: 0.7;
+}
+
+main .cont #goodslist ul li .goodsImg:hover .effect {
+  display: block;
 }
 
 main .cont #goodslist ul li .goodsInfo {
