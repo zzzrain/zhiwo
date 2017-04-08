@@ -1,6 +1,41 @@
 require(['config'],function(){
 	require(['jquery','common','zoom'],function(){
 		$(()=>{
+			// cookie操作
+			getCookie();
+			$(document).on('click','#h-register',function(){// 退出设置
+				rmCookie();
+			});
+
+			// 商品cookie
+			var arr = [];
+			var cookie = document.cookie.split('; ');
+			cookie.forEach(function(item){
+				item = item.split('=');
+				if(item[0] === 'carlist'){
+					arr = JSON.parse(item[1]);
+					arr.forEach(function(goods){
+						$('.carlist ul').append($('<li/>').addClass('clearfix').html(`
+							<div class="carlist_img">
+								<a href=""><img src="${goods.src}" data-guid="${goods.guid}"></a>
+							</div>
+							<div class="carlist_info">
+								<p><a href="">${goods.name}</a></p>
+								<div class="clearfix">
+									<span class="price">￥${goods.price}</span>
+									<p class="amount clearfix">
+										<span class="down"></span>
+										<input type="text" value="${goods.amount}">
+										<span class="up"></span>
+									</p>
+									<a id="del">删除</a>
+								</div>
+							</div>`));
+					});
+				}
+			});
+			count();
+
 			// 获取地址栏数据
 			var str = window.location.href;
 			var guid = str.substr(str.indexOf('?')+6)
@@ -135,53 +170,7 @@ require(['config'],function(){
 				}).join('');
 				$('main').html(goods);
 			});
-
-			// 数量、价格计算函数
-			function count(){
-				var num = 0;
-				var rmb = 0;	
-				var pro = $('.carlist ul li');
-				for(var i=0;i<pro.length;i++){
-					var val = pro.eq(i);
-					num += val.find('input').val()*1;
-					rmb += val.find('input').val()*1*val.find('.price').html().slice(1)*1;
-				}
-				$('.carlist .account').html(`
-					<p class="num">共<span>${num}</span>件商品</p>
-					<p class="rmb">共计<span>￥</span><em>${rmb}</em></p>
-					<p class="car"><a href="">去购物车结算</a></p>
-				`);	
-				$('.panel .count').html(num);
-			}
-			
-			// 读取cookie
-			var arr = [];
-			var cookie = document.cookie.split('; ');
-			cookie.forEach(function(item){
-				item = item.split('=');
-				if(item[0] === 'carlist'){
-					arr = JSON.parse(item[1]);
-					arr.forEach(function(goods){
-						$('.carlist ul').append($('<li/>').addClass('clearfix').html(`
-							<div class="carlist_img">
-								<a href=""><img src="${goods.src}" data-guid="${goods.guid}"></a>
-							</div>
-							<div class="carlist_info">
-								<p><a href="">${goods.name}</a></p>
-								<div class="clearfix">
-									<span class="price">￥${goods.price}</span>
-									<p class="amount clearfix">
-										<span class="down"></span>
-										<input type="text" value="${goods.amount}">
-										<span class="up"></span>
-									</p>
-									<a id="del">删除</a>
-								</div>
-							</div>`));
-					});
-					count();
-				}
-			});
+		
 			
 			// 延时等待数据获取
 			setTimeout(function(){
@@ -235,9 +224,6 @@ require(['config'],function(){
 								</div>
 							</div>`));
 
-						// 计算数量、价格
-						count();	
-
 						// 存放cookie
 						var obj = {};
 						obj.guid = current.attr('data-guid');
@@ -247,24 +233,24 @@ require(['config'],function(){
 						obj.amount = $('#count').val();
 						arr.push(obj);
 
-						var now = new Date();
-						now.setDate(now.getDate() + 3);
-						document.cookie = 'carlist=' + JSON.stringify(arr) +';expires='+now +';path='+'/';
-
-						// 删除商品/cookie
-						$('.carlist ul').on('click','li #del',function(){
-							$(this).parents('li').remove();
-							for(var i=0;i<arr.length;i++){
-								if(arr[i].guid === $(this).find('img').attr('data-guid')){
-									arr.splice(i,1);
-									break;
-								}
-							}
-							count();
-						});
+						saveCookie();
+						count();
 					});
 				}
 				
+				// 删除商品/cookie
+				$('.carlist ul').on('click','li #del',function(){
+					$(this).parents('li').remove();
+					var del = $(this).parents('.carlist_info').siblings('.carlist_img').find('img').attr('data-guid');					
+					for(var i=0;i<arr.length;i++){
+						if(del === arr[i].guid) arr.splice(i,1);
+						break;
+					}
+					// 重置cookie、信息
+					saveCookie();
+					count();
+				});
+
 				// 展开购物车
 				$('#shopcar a').click(function(){
 					$('.carlist').animate({right: 35},1000);
@@ -274,7 +260,32 @@ require(['config'],function(){
 				$('.carlist h2 i').click(function(){
 					$('.carlist').animate({right: -300},1000);
 				});
-			},2000)
+			},2000);
+
+			// 数量、价格计算函数
+			function count(){
+				var num = 0;
+				var rmb = 0;	
+				var pro = $('.carlist ul li');
+				for(var i=0;i<pro.length;i++){
+					var val = pro.eq(i);
+					num += val.find('input').val()*1;
+					rmb += val.find('input').val()*1*val.find('.price').html().slice(1)*1;
+				}
+				$('.carlist .account').html(`
+					<p class="num">共<span>${num}</span>件商品</p>
+					<p class="rmb">共计<span>￥</span><em>${rmb}</em></p>
+					<p class="car"><a href="">去购物车结算</a></p>
+				`);	
+				$('.panel .count').html(num);
+			}
+
+			// 保存商品cookie
+			function saveCookie(){
+				var now = new Date();
+				now.setDate(now.getDate()+3);
+				document.cookie = 'carlist=' + JSON.stringify(arr) + ';expires=' + now +';path='+'/';
+			}
 		});
 	});
 });

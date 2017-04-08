@@ -76,7 +76,7 @@ function verify(res){
 	res.html(num);
 }
 
-// 保存cookie
+// 保存cookie（仅用于注册登录）
 function setCookie(src){
 	$.post(src, {phone:$('#phone').val(),password:$('#password').val()},
 		function(res){
@@ -94,20 +94,23 @@ function setCookie(src){
 		})
 }
 
-// 获取cookie
+// 获取cookie（仅用于注册登录）
 function getCookie(){
-	var cookie = document.cookie;
-	if(cookie){
-		cookie = cookie.split('=');
-		$('#h-login').html('欢迎您，知我用户'+cookie[1]);
-		$('#h-register').html('[退出]');
-	}
+	var cookie = document.cookie.split('; ');
+	console.log(cookie)
+	cookie.forEach(function(item){
+		item = item.split('=');
+		if(item[0] === 'phone'){
+			$('#h-login').html('欢迎您，知我用户'+item[1]);
+			$('#h-register').html('[退出]');
+		}
+	});
 }
 
-// 删除cookie&&清空内容
+// 删除cookie&&清空内容（仅用于注册登录）
 function rmCookie(){
-	$('#h-login').html(`<a href="login.html">请登录</a></li>`);
-	$('#h-register').html(`<a href="register.html">快速注册</a>`);
+	$('#h-login').html(`<a href="http://localhost/project/html/login.html">请登录</a></li>`);
+	$('#h-register').html(`<a href="http://localhost/project/html/register.html">快速注册</a>`);
 	// 更改日期清空cookie
 	var now = new Date();
 	now.setDate(now.getDate()-1);

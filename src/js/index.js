@@ -11,7 +11,7 @@ require(['config'],function(){
 			create();
 
 			// 滚动事件
-			scroll();		
+			scroll();
 
 			// cookie操作
 			getCookie();

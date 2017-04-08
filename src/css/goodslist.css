@@ -858,7 +858,7 @@ main .cont #goodslist ul li .goodsInfo .sale {
 main .cont #goodslist ul li .goodsInfo .sale .time {
   float: left;
   padding-left: 22px;
-  background: url(../css/img/icon.png) no-repeat 0 -220px;
+  background: url(../css/img/clock.png) no-repeat 0 -220px;
 }
 
 main .cont #goodslist ul li .goodsInfo .sale .count {

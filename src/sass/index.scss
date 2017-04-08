@@ -42,7 +42,6 @@ main{
 	    text-align: center;
     }
     #hot{
-    	width: 1100px;
     	margin: 0 auto;
     	li{
     		width: 100%;
@@ -143,10 +142,8 @@ main{
     	}
     }
     #brand{
+    	margin: 35px auto;
     	position: relative;
-    	width: 1100px;
-    	margin: 0 auto;
-    	margin-top: 35px;
 		a{
 			color: #6c6c6c;
 		}		
@@ -225,8 +222,13 @@ main{
 		    height: 212px;
     	}
     }
+    .carlist{
+		margin: 0 auto;
+		a{
+			color: #00c8ff;
+		}
+    }
     .search{
-    	width: 1100px;
 	    background: #fff;
 	    padding: 30px 0;
 	    margin: 35px auto;
