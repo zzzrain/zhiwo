@@ -593,30 +593,30 @@ main .cont .goods .goodsInfo .count .amount span {
   cursor: pointer;
 }
 
-main .cont .goods .goodsInfo .count .amount #jia {
+main .cont .goods .goodsInfo .count .amount .add {
   background: url(../css/img/updown.png) no-repeat 0 0;
 }
 
-main .cont .goods .goodsInfo .count .amount #jian {
+main .cont .goods .goodsInfo .count .amount .cut {
   background: url(../css/img/updown.png) no-repeat 0 -24px;
 }
 
-main .cont .goods .goodsInfo .buyer {
+main .cont .goods .goodsInfo .handle {
   margin-top: 30px;
 }
 
-main .cont .goods .goodsInfo .buyer .buy {
+main .cont .goods .goodsInfo .handle .buy {
   margin-bottom: 15px;
 }
 
-main .cont .goods .goodsInfo .buyer .buy .add {
+main .cont .goods .goodsInfo .handle .buy .btn {
   width: 200px;
   height: 45px;
   float: left;
   margin-right: 35px;
 }
 
-main .cont .goods .goodsInfo .buyer .buy .add span {
+main .cont .goods .goodsInfo .handle .buy .btn span {
   display: block;
   width: 137px;
   height: 45px;
@@ -628,7 +628,7 @@ main .cont .goods .goodsInfo .buyer .buy .add span {
   background: url(../css/img/xingji.png) 0px -78px no-repeat #ff643c;
 }
 
-main .cont .goods .goodsInfo .buyer .buy .cang {
+main .cont .goods .goodsInfo .handle .buy .cang {
   float: left;
   color: #c4c4c4;
   cursor: pointer;

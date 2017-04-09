@@ -492,19 +492,19 @@ main{
 						    float: left;
 						    cursor: pointer;
 					    }
-					    #jia{
+					    .add{
 					    	background: url(../css/img/updown.png) no-repeat 0 0;
 					    }
-					    #jian{
+					    .cut{
 					    	background: url(../css/img/updown.png) no-repeat 0 -24px;
 					    }
 			    	}
 			    }
-			    .buyer{
+			    .handle{
 			    	margin-top: 30px;
 					.buy{
 						margin-bottom: 15px;
-						.add{
+						.btn{
 							width: 200px;
 						    height: 45px;
 						    float: left;

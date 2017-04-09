@@ -82,14 +82,14 @@ require(['config'],function(){
 								<div class="count clearfix">
 									<span>数&nbsp;量:</span>
 									<p class="amount">
-										<span id="jian"></span>
+										<span class="cut"></span>
 										<input type="text" id="count" value="1">
-										<span id="jia"></span>
+										<span class="add"></span>
 									</p>
 			                    </div>
-								<div class="buyer">
+								<div class="handle">
 									<div class="buy clearfix">
-										<p class="add"><span>加入购物车</span></p>
+										<p class="btn"><span>加入购物车</span></p>
 										<p class="cang"><span>收藏</span><i></i></p>
 									</div>
 									<div class="effect clearfix">
@@ -175,19 +175,19 @@ require(['config'],function(){
 
 				// 购买数量
 				var idx = 1;
-				$('.count #jia').click(function(){
+				$('.count .add').click(function(){
 					idx++;
 					$('#count').val(idx);
 				});
 
-				$('.count #jian').click(function(){
+				$('.count .cut').click(function(){
 					idx--;
 					if(idx === 0) idx = 1;
 					$('#count').val(idx);
 				});
 
 				// 飞入效果
-				$('.add span').click(fly);
+				$('.btn span').click(fly);
 				function fly(){	
 					// 原图参数
 					var src = $('.goodsImg').find('img').eq(0).attr('src');

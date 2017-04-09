@@ -824,11 +824,11 @@ main .cont table tr .amount span {
   cursor: pointer;
 }
 
-main .cont table tr .amount .jia {
+main .cont table tr .amount .add {
   background: url(../css/img/updown.png) no-repeat 0 0px;
 }
 
-main .cont table tr .amount .jian {
+main .cont table tr .amount .cut {
   background: url(../css/img/updown.png) no-repeat 0 -24px;
 }
 

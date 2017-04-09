@@ -23,9 +23,9 @@ require(['config'],function(){
 							<td class="price"><p>￥<span>${goods.price}</span></p></td>
 							<td class="amount">
 								<p>
-									<span class="jian"></span>
+									<span class="cut"></span>
 									<input type="text" id="count" value="${goods.amount}">
-									<span class="jia"></span>
+									<span class="add"></span>
 								</p>
 							</td>
 							<td class="integral"><p>${goods.price}</p></td>
@@ -40,10 +40,10 @@ require(['config'],function(){
 
 			// 购买数量
 			var idx = 1;
-			$('tbody').on('click','.jia',function(){
+			$('tbody').on('click','.add',function(){
 				idx++;
 				alone($(this),idx);
-			}).on('click','.jian',function(){
+			}).on('click','.cut',function(){
 				idx--;
 				if(idx === 0) {idx = 1}
 				alone($(this),idx);
