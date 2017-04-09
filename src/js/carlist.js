@@ -15,16 +15,16 @@ require(['config'],function(){
 				if(item[0] === 'carlist'){
 					arr = JSON.parse(item[1]);
 					arr.forEach(function(goods){
-						$('tbody').append($('<tr/>').html(`
+						$('table').append($('<tr/>').html(`
 							<td class="name clearfix">
-								<p class="goodsImg"><img src="${goods.src}"></p>
+								<p class="goodsImg"><img src="${goods.src}" data-guid="${goods.guid}"></p>
 								<div class="goodsInfo">${goods.name}</div>
 							</td>
 							<td class="price"><p>￥<span>${goods.price}</span></p></td>
 							<td class="amount">
 								<p>
 									<span class="cut"></span>
-									<input type="text" id="count" value="${goods.amount}">
+									<input type="text" value="${goods.amount}">
 									<span class="add"></span>
 								</p>
 							</td>
@@ -38,24 +38,51 @@ require(['config'],function(){
 			});
 			count();
 
-			// 购买数量
-			var idx = 1;
-			$('tbody').on('click','.add',function(){
-				idx++;
-				alone($(this),idx);
-			}).on('click','.cut',function(){
-				idx--;
-				if(idx === 0) {idx = 1}
-				alone($(this),idx);
-			});
-			count();
 
-			// 单件计算函数
-			function alone(val,idx){
-				val.siblings('#count').val(idx);
-				var rmb = val.parents('.amount').siblings('.price').find('span');
-				rmb.html(idx*rmb.html());
-			}
+
+			// 购买数量			
+			$('table').on('click','.add',function(){
+				var num = $(this).siblings('input');
+				var idx = num.val()*1;
+				idx++;
+				num.val(idx);
+				count();
+			}).on('click','.cut',function(){
+				var num = $(this).siblings('input');
+				var idx = num.val()*1;
+				idx--;
+				num.val(idx);
+				if(idx === 0) {idx = 1}
+				$(this).siblings('input').val(idx);
+				count();
+			});
+			
+
+			// 删除商品
+			$('main').on('click','#del',function(){
+				$(this).parents('tr').remove();
+				var del = $(this).parents('.operate').siblings('.name').find('img').attr('data-guid');			
+				for(var i=0;i<arr.length;i++){
+					if(del === arr[i].guid) {
+						arr.splice(i,1);
+						// 重写cookie、结构
+						var now = new Date();
+						now.setDate(now.getDate()+3);
+						document.cookie = 'carlist=' + JSON.stringify(arr) + ';expires=' + now +';path='+'/';
+						count();
+						break;
+					}
+				}
+			}).on('click','.all',function(){ // 清空操作
+				console.log(1)
+				$('tbody').remove();
+				// 重写cookie、结构
+				var now = new Date();
+				now.setDate(now.getDate()-1);
+				document.cookie = 'carlist=xxx;expires=' + now +';path='+'/';
+				count();
+			});
+
 			
 			// 数量、价格计算函数
 			function count(){
@@ -63,7 +90,7 @@ require(['config'],function(){
 				var rmb = 0;	
 				var pro = $('tbody tr');
 				for(var i=0;i<pro.length;i++){
-					var val = pro.eq(i).find('#count').val();
+					var val = pro.eq(i).find('input').val();
 					num += val*1;
 					rmb += val*1*pro.eq(i).find('.price span').html()*1;
 				}
