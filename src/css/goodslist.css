@@ -528,154 +528,6 @@ footer .copyright a {
   color: #6c6c6c;
 }
 
-footer .sidebar {
-  width: 35px;
-  position: fixed;
-  top: 0;
-  right: 0px;
-  z-index: 1000;
-  min-height: 100%;
-}
-
-footer .sidebar .panel {
-  width: 35px;
-  height: 100%;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 20;
-  background: #6c6c6c;
-}
-
-footer .sidebar .panel li {
-  position: relative;
-}
-
-footer .sidebar .panel li > a {
-  display: block;
-  width: 35px;
-}
-
-footer .sidebar .panel li > a:hover {
-  background-color: #00c8ff;
-}
-
-footer .sidebar .panel li > a i {
-  display: block;
-  width: 35px;
-  height: 35px;
-  background: url(../css/img/sidebarico.png) no-repeat;
-}
-
-footer .sidebar .panel li .tool_tip {
-  width: 103px;
-  height: 35px;
-  line-height: 35px;
-  background: #6c6c6c;
-  text-align: center;
-  color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0px;
-  display: none;
-}
-
-footer .sidebar .panel .partone {
-  position: absolute;
-  top: 50%;
-  margin-top: -200px;
-  left: 0;
-  z-index: 10;
-  background: #6c6c6c;
-}
-
-footer .sidebar .panel .partone .login {
-  margin-bottom: 21px;
-}
-
-footer .sidebar .panel .partone .shopcar {
-  height: 126px;
-  margin-bottom: 26px;
-}
-
-footer .sidebar .panel .partone .shopcar i {
-  background-position: 0 -35px;
-}
-
-footer .sidebar .panel .partone .shopcar .text {
-  color: #fff;
-  display: block;
-  width: 15px;
-  margin: 5px auto 10px;
-}
-
-footer .sidebar .panel .partone .shopcar .count {
-  color: #fff;
-  display: block;
-  width: 35px;
-  height: 35px;
-  line-height: 32px;
-  background: url(../css/img/sidebarico.png) no-repeat 0 -210px;
-  font-size: 14px;
-}
-
-footer .sidebar .panel .partone .like {
-  margin-bottom: 8px;
-}
-
-footer .sidebar .panel .partone .like a i {
-  background-position: 0 -70px;
-}
-
-footer .sidebar .panel .partone .foot a i {
-  background-position: 0 -105px;
-}
-
-footer .sidebar .panel .parttwo {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  z-index: 9;
-  background: #6c6c6c;
-}
-
-footer .sidebar .panel .parttwo .wechat {
-  margin-bottom: 10px;
-}
-
-footer .sidebar .panel .parttwo .wechat > a i {
-  background-position: 0 -140px;
-}
-
-footer .sidebar .panel .parttwo .server {
-  margin-bottom: 30px;
-}
-
-footer .sidebar .panel .parttwo .server > a i {
-  background-position: 0 -175px;
-}
-
-footer .sidebar .panel .parttwo .top {
-  width: 35px;
-  height: 35px;
-}
-
-footer .sidebar .panel .parttwo .top .up_triangle {
-  width: 0;
-  height: 0;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 3px;
-  border-width: 5px;
-  border-style: dashed dashed solid dashed;
-  border-color: transparent transparent #fff transparent;
-}
-
-footer .sidebar .panel .parttwo .top span {
-  color: #fff;
-}
-
 main .cont {
   margin: 35px auto;
 }
@@ -870,4 +722,152 @@ main .cont #goodslist ul li .goodsInfo .sale .time {
 
 main .cont #goodslist ul li .goodsInfo .sale .count {
   float: right;
+}
+
+main .sidebar {
+  width: 35px;
+  position: fixed;
+  top: 0;
+  right: 0px;
+  z-index: 1000;
+  min-height: 100%;
+}
+
+main .sidebar .panel {
+  width: 35px;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background: #6c6c6c;
+}
+
+main .sidebar .panel li {
+  position: relative;
+}
+
+main .sidebar .panel li > a {
+  display: block;
+  width: 35px;
+}
+
+main .sidebar .panel li > a:hover {
+  background-color: #00c8ff;
+}
+
+main .sidebar .panel li > a i {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background: url(../css/img/sidebarico.png) no-repeat;
+}
+
+main .sidebar .panel li .tool_tip {
+  width: 103px;
+  height: 35px;
+  line-height: 35px;
+  background: #6c6c6c;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  display: none;
+}
+
+main .sidebar .panel .partone {
+  position: absolute;
+  top: 50%;
+  margin-top: -200px;
+  left: 0;
+  z-index: 10;
+  background: #6c6c6c;
+}
+
+main .sidebar .panel .partone .login {
+  margin-bottom: 21px;
+}
+
+main .sidebar .panel .partone .shopcar {
+  height: 126px;
+  margin-bottom: 26px;
+}
+
+main .sidebar .panel .partone .shopcar i {
+  background-position: 0 -35px;
+}
+
+main .sidebar .panel .partone .shopcar .text {
+  color: #fff;
+  display: block;
+  width: 15px;
+  margin: 5px auto 10px;
+}
+
+main .sidebar .panel .partone .shopcar .count {
+  color: #fff;
+  display: block;
+  width: 35px;
+  height: 35px;
+  line-height: 32px;
+  background: url(../css/img/sidebarico.png) no-repeat 0 -210px;
+  font-size: 14px;
+}
+
+main .sidebar .panel .partone .like {
+  margin-bottom: 8px;
+}
+
+main .sidebar .panel .partone .like a i {
+  background-position: 0 -70px;
+}
+
+main .sidebar .panel .partone .foot a i {
+  background-position: 0 -105px;
+}
+
+main .sidebar .panel .parttwo {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  z-index: 9;
+  background: #6c6c6c;
+}
+
+main .sidebar .panel .parttwo .wechat {
+  margin-bottom: 10px;
+}
+
+main .sidebar .panel .parttwo .wechat > a i {
+  background-position: 0 -140px;
+}
+
+main .sidebar .panel .parttwo .server {
+  margin-bottom: 30px;
+}
+
+main .sidebar .panel .parttwo .server > a i {
+  background-position: 0 -175px;
+}
+
+main .sidebar .panel .parttwo .top {
+  width: 35px;
+  height: 35px;
+}
+
+main .sidebar .panel .parttwo .top .up_triangle {
+  width: 0;
+  height: 0;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 3px;
+  border-width: 5px;
+  border-style: dashed dashed solid dashed;
+  border-color: transparent transparent #fff transparent;
+}
+
+main .sidebar .panel .parttwo .top span {
+  color: #fff;
 }

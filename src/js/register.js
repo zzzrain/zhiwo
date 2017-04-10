@@ -20,10 +20,10 @@ require(['config'],function(){
 					alert('两次输入的密码不匹配');
 					return false;
 				}
-				/*if($('.verify input').val() != $('#verify').html()){
+				if($('.verify input').val() != $('#verify').html()){
 					alert('验证码有误，请重新输入');
 					return false;
-				}*/
+				}
 				setCookie('../php/register.php')
 			}).on('click','#h-register',function(){// 退出设置
 				rmCookie();

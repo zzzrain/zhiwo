@@ -164,7 +164,7 @@ require(['config'],function(){
 						</div>
 					</div>`
 				}).join('');
-				$('main').html(goods);
+				$('main').prepend(goods);
 			});
 		
 			

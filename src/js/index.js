@@ -1,7 +1,10 @@
 require(['config'],function(){
 	require(['jquery','common'],function(){
 		$(()=>{
-			// cookie操作
+			// 加载结构
+			$('footer').load('/project/html/footer.html');
+			
+			// 登录cookie
 			getCookie();
 			$(document).on('click','#h-register',function(){// 退出设置
 				rmCookie();
@@ -18,6 +21,9 @@ require(['config'],function(){
 
 			// 滚动事件
 			scroll();
+
+			// 下拉效果
+			setTimeout(slider(),2000);
 			
 			function play(){
 				var play = $('#play');

@@ -625,106 +625,7 @@ main{
 			}
 		}
 	}
-}
-footer{
-	clear: both;
-    width: 100%;
-    background: #fff;
-    .intro{
-    	margin: 0 auto 35px;
-	    padding-top: 34px;
-	    padding-left: 16px;
-	    dl{
-	    	float: left;
-		    width: 122px;
-		    margin-left: 20px;
-		    dt{
-		    	font-size: 14px;
-			    font-weight: bold;
-			    margin-bottom: 10px;
-		    }
-		    a{
-		    	color: #6c6c6c;
-			    font-size: 14px;
-			    line-height: 24px;
-			    display: block;
-		    }
-	    }
-	    .public{
-	    	margin-left: 8px;
-	    }
-	    .wechat{
-	    	width: 103px;
-    		float: right;
-    		dt{
-    			margin-left: 6px;
-    		}
-    		img{
-    			display: block;
-			    width: 103px;
-			    height: 103px;
-    		}
-	    }
-	    .method{
-	    	font-weight: bold;
-		    font-size: 14px;
-		    margin-top: 6px;
-	    }
-	    .phone{
-	    	color: #00c8ff;
-		    font-weight: bold;
-		    margin-top: 8px;
-	    }
-    }
-    .center{
-    	height: 35px;
-    	background: #00c8ff;
-    	ul{
-    		margin: 0 auto;
-    		padding-left: 58px;
-		    text-align: center;
-		    font-size: 0;
-		    li{
-		    	font-family: 微软雅黑;
-			    color: rgb(255, 255, 255);
-			    font-size: 14px;
-			    font-weight: bold;
-			    width: 134px;
-			    height: 35px;
-			    line-height: 35px;
-			    display: inline-block;
-			    padding-left: 30px;
-			    text-align: left;
-		    }
-		    .baidu{background: url(../css/img/fournav.png) no-repeat 0 0;}
-		    .quality{background: url(../css/img/fournav.png) no-repeat 0 -35px;}
-		    .return{background: url(../css/img/fournav.png) no-repeat 0 -70px;}
-		    .postage{background: url(../css/img/fournav.png) no-repeat 0 -105px;}
-    	}
-    }
-    .links{
-    	width: 1100px;
-	    margin: 14px auto -10px;
-	    height: 20px;
-	    overflow: hidden;
-    }
-    .copyright{
-    	margin: 0 auto;
-    	padding: 26px 0 45px;
-    	p{
-    		text-align: center;
-    	}
-    	.text1{
-    		margin-bottom: 7px;
-    	}
-    	.text2{
-    		margin-bottom: 20px;
-    	}
-    	a{
-    		color: #6c6c6c;
-    	}
-    }
-    .sidebar{
+	.sidebar{
     	width: 35px;
 	    position: fixed;
 	    top: 0px;
@@ -993,4 +894,103 @@ footer{
 	    	}
 	    }
     } 
+}
+footer{
+	clear: both;
+    width: 100%;
+    background: #fff;
+    .intro{
+    	margin: 0 auto 35px;
+	    padding-top: 34px;
+	    padding-left: 16px;
+	    dl{
+	    	float: left;
+		    width: 122px;
+		    margin-left: 20px;
+		    dt{
+		    	font-size: 14px;
+			    font-weight: bold;
+			    margin-bottom: 10px;
+		    }
+		    a{
+		    	color: #6c6c6c;
+			    font-size: 14px;
+			    line-height: 24px;
+			    display: block;
+		    }
+	    }
+	    .public{
+	    	margin-left: 8px;
+	    }
+	    .wechat{
+	    	width: 103px;
+    		float: right;
+    		dt{
+    			margin-left: 6px;
+    		}
+    		img{
+    			display: block;
+			    width: 103px;
+			    height: 103px;
+    		}
+	    }
+	    .method{
+	    	font-weight: bold;
+		    font-size: 14px;
+		    margin-top: 6px;
+	    }
+	    .phone{
+	    	color: #00c8ff;
+		    font-weight: bold;
+		    margin-top: 8px;
+	    }
+    }
+    .center{
+    	height: 35px;
+    	background: #00c8ff;
+    	ul{
+    		margin: 0 auto;
+    		padding-left: 58px;
+		    text-align: center;
+		    font-size: 0;
+		    li{
+		    	font-family: 微软雅黑;
+			    color: rgb(255, 255, 255);
+			    font-size: 14px;
+			    font-weight: bold;
+			    width: 134px;
+			    height: 35px;
+			    line-height: 35px;
+			    display: inline-block;
+			    padding-left: 30px;
+			    text-align: left;
+		    }
+		    .baidu{background: url(../css/img/fournav.png) no-repeat 0 0;}
+		    .quality{background: url(../css/img/fournav.png) no-repeat 0 -35px;}
+		    .return{background: url(../css/img/fournav.png) no-repeat 0 -70px;}
+		    .postage{background: url(../css/img/fournav.png) no-repeat 0 -105px;}
+    	}
+    }
+    .links{
+    	width: 1100px;
+	    margin: 14px auto -10px;
+	    height: 20px;
+	    overflow: hidden;
+    }
+    .copyright{
+    	margin: 0 auto;
+    	padding: 26px 0 45px;
+    	p{
+    		text-align: center;
+    	}
+    	.text1{
+    		margin-bottom: 7px;
+    	}
+    	.text2{
+    		margin-bottom: 20px;
+    	}
+    	a{
+    		color: #6c6c6c;
+    	}
+    }
 }

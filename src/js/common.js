@@ -1,5 +1,5 @@
 // 	下拉效果、滑动效果
-$(()=>{	
+$(()=>{
 	var wechat = $('#wechat');
 	var personal = $('#personal');
 	var server = $('#server');
@@ -27,42 +27,11 @@ $(()=>{
 		$(this).animate({width: 74}).siblings().animate({width: 0})
 	}).on('mouseleave','#slider li',function(){
 		$(this).animate({width: 0})
-	})	
-
-	/*$('header').mouseover(function(e){
-		switch (e.target.id.toLowerCase()){
-			case 'wechat' : 
-			wechat.children('div').animate({height: 100});
-			break;
-			case 'personal' : 
-			personal.children('div').animate({height: 150});
-			break;
-			case 'server' : 
-			server.children('div').animate({height: 120});
-			break;
-			case 'market' : 
-			market.children('.list').animate({height: 304});
-			break;
-		}
-	});	*/
-	
-	/*$('header').mouseout(function(e){
-		switch (e.target.id.toLowerCase()){
-			case 'wechat' : 
-			wechat.children('div').animate({height: 0});
-			break;
-			case 'personal' : 
-			personal.children('div').animate({height: 0});
-			break;
-			case 'server' : 
-			server.children('div').animate({height: 0});
-			break;
-			case 'market' : 
-			market.children('.list').animate({height: 0});
-			break;
-		}
-	});*/
+	})
 })
+function slider(){
+
+}
 
 // 验证码函数
 function verify(res){

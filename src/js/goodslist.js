@@ -1,6 +1,9 @@
 require(['config'],function(){
 	require(['jquery','common'],function(){
 		$(()=>{	
+			// 加载结构
+			$('footer').load('/project/html/footer.html');
+
 			// cookie操作
 			getCookie();
 			$(document).on('click','#h-register',function(){// 退出设置
