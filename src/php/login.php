@@ -19,7 +19,7 @@
             if($row['phone'] == $tel && $row['password'] == $psw){
                 echo $tel;
             }else{
-
+                
             }
         }
     }

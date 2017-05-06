@@ -1,6 +1,7 @@
 ﻿github:
-https://github.com/zzzrian/project.git
 git@github.com:zzzrian/project.git
+https://github.com/zzzrian/project.git
+
 
 如需MySQL密码：root
 
