@@ -1,6 +1,6 @@
 ﻿github:
-git@github.com:zzzrian/project.git
-https://github.com/zzzrian/project.git
+git@github.com:zzzrian/zhiwo.git
+https://github.com/zzzrian/zhiwo.git
 
 
 如需MySQL密码：root
