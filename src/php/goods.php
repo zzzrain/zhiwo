@@ -1,6 +1,7 @@
 <?php	
 	// 前端数据
 	$guid = $_POST['guid'];
+
     //准备好数据连接对象
     $con = new mysqli('localhost','root','root','zhiwo'); 
   	
